@@ -55,5 +55,5 @@ nav:
         - '6. Scalability': 'dev/future/scalability.md'
         - '7. Unanswered questions': 'dev/future/unanswered_questions.md'
 - 5. Documenting: 
-        - 'Contributing': 'contribute_to_the_doc/CONTRIBUTING.md'
-- 'Docs reorganisation' : 'contribute_to_the_doc/migration_reason.md'
+    - 'Contributing': 'contribute_to_the_doc/CONTRIBUTING.md'
+    - 'Docs reorganisation' : 'contribute_to_the_doc/migration_reason.md'
