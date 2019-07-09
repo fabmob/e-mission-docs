@@ -4,9 +4,11 @@
 
 ## Traceur Fabmob specific info:  
 
-- **Docs**: the Traceur doc is in the master branch ; the doc pulled from e-mission is in the e-mission-contrib  or if we want to contribute to the e-mission docs  
-- **Code** : similarly there is a master branch for [e-mission-phone-fabmob](https://github.com/fabmob/e-mission-phone-fabmob) and [e-mission-server-fabmob](https://github.com/fabmob/e-mission-phone-fabmob), as for [e-mission-translate](https://github.com/e-mission/e-mission-translate), and an e-mission-contrib branch  
+- **Docs**: the Traceur doc is [in the master branch](https://github.com/fabmob/e-mission-docs/tree/master) ; the doc pulled from e-mission is [in the e-mission-contrib branch](https://github.com/fabmob/e-mission-phone-fabmob/tree/e-mission-contrib), it is used when we want to contribute to the e-mission docs  
+- **Code** : similarly there is a master branch for [e-mission-phone-fabmob](https://github.com/fabmob/e-mission-phone-fabmob/tree/master) and [e-mission-server-fabmob](https://github.com/fabmob/e-mission-server-fabmob/tree/master), as for [e-mission-translate](https://github.com/fabmob/e-mission-translate/tree/master), and an e-mission-contrib branch  
 - **Issues** : [Specific issues of the Traceur FabMob project](https://github.com/fabmob/e-mission-phone-fabmob/issues) currently concern more the phone app   
+
+- [**Docs web site on ReadTheDocs](https://fabmob.readthedocs.io/)
 
 - [**CODE on GitHub**](https://github.com/fabmob)     
 
