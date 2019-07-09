@@ -10,6 +10,7 @@ nav:
     - '4. Multi-layer stack': 'install/multi_layer_stack.md'
 - 2. Use:
     - 'Use the app': 'use/end_user.md'
+    - 'FAQ' : 'use/FAQ.md'  
 - 3. Manage:
     - '1. Troubleshooting the app': 'manage/troubleshooting_app_faq.md'
     - '2. Troubleshooting the server': 'manage/troubleshooting_server_faq.md'
