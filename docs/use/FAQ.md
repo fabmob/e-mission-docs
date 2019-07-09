@@ -1,5 +1,6 @@
-This is an **FAQ page in French for end-users** 
-(some of this info will be contributed to the [English e-mission docs](https://github.com/e-mission/e-mission-docs)
+# FAQ page in French for end-users  
+
+(some of this FAQ will be contributed back to the [English e-mission docs](https://github.com/e-mission/e-mission-docs)
 
 Pensez à lire [la notice de présentation de l'application](https://docs.google.com/document/d/1X_FwiXjmWEFCLNhEXNa3-cD0FCjOURlLClCUiUoQ6PM/) et au besoin regarder [les autres livrables du projet traceur Fabmob](https://oultim.frama.site/livrables).  
 
