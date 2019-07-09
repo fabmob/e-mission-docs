@@ -2,15 +2,22 @@
 
 **The documentation of Traceur Fabmob, a fork of e-mission, an open source phone-based personal mobility tracking software from UC Berkeley**. The doc is in English. (French docs are relative to end-user app manuel and evaluations and are to be found in the project site)
 
-This repo contains all the documentation for the project, except end-user documentation (which will be on the project web site) and [almost ALL THE ISSUES](https://github.com/e-mission/e-mission-docs/issues/). 
+## Traceur Fabmob specific info:  
 
-[Specific issues of the Traceur FabMob project](https://github.com/fabmob/e-mission-phone-fabmob/issues) currently concern more the phone app.
+- **Docs**: the Traceur doc is in the master branch ; the doc pulled from e-mission is in the e-mission-contrib  or if we want to contribute to the e-mission docs  
+- **Code** : similarly there is a master branch for [e-mission-phone-fabmob](https://github.com/fabmob/e-mission-phone-fabmob) and [e-mission-server-fabmob](https://github.com/fabmob/e-mission-phone-fabmob), as for [e-mission-translate](https://github.com/e-mission/e-mission-translate), and an e-mission-contrib branch  
+- **Issues** : [Specific issues of the Traceur FabMob project](https://github.com/fabmob/e-mission-phone-fabmob/issues) currently concern more the phone app   
 
-There are some specialized READMEs [in the individual repositories](https://github.com/e-mission), but they are gradually being moved in here. This means that if you have any questions, you should first search here and if you don't find any [existing issues](https://github.com/e-mission/e-mission-docs/issues/), you should [file an issue here](https://github.com/e-mission/e-missiond-docs/issue).
+### [CODE on GitHub](https://github.com/fabmob)     
 
 ### [traceur web site](https://oultim.frama.site) : presentation, evaluations, news...
+
+## general E-mission info:
+
+The [e-mission-docs repo](https://github.com/e-mission/e-mission-docs) contains all the documentation for the project, except end-user documentation (which will be on the project web site) and [almost ALL THE ISSUES](https://github.com/e-mission/e-mission-docs/issues/).  
+
+There are some specialized READMEs [in the individual repositories](https://github.com/e-mission), but they are gradually being moved in here. This means that if you have any questions, you should first search here and if you don't find any [existing issues](https://github.com/e-mission/e-mission-docs/issues/), you should [file an issue here](https://github.com/e-mission/e-missiond-docs/issue).
 ### [e-mission web site](https://e-mission.eecs.berkeley.edu/)   
-### [CODE on GitHub](https://github.com/fabmob)     
 ### [LICENCE BSD-3](LICENSE.md)  
 
 ## What is e-mission
