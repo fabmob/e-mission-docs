@@ -8,11 +8,11 @@
 - **Code** : similarly there is a master branch for [e-mission-phone-fabmob](https://github.com/fabmob/e-mission-phone-fabmob) and [e-mission-server-fabmob](https://github.com/fabmob/e-mission-phone-fabmob), as for [e-mission-translate](https://github.com/e-mission/e-mission-translate), and an e-mission-contrib branch  
 - **Issues** : [Specific issues of the Traceur FabMob project](https://github.com/fabmob/e-mission-phone-fabmob/issues) currently concern more the phone app   
 
-### [CODE on GitHub](https://github.com/fabmob)     
+- [**CODE on GitHub**](https://github.com/fabmob)     
 
-### [traceur web site](https://oultim.frama.site) : presentation, evaluations, news...
+- [**traceur web site**](https://oultim.frama.site) : presentation, evaluations, news...
 
-## general E-mission info:
+## General E-mission info:
 
 The [e-mission-docs repo](https://github.com/e-mission/e-mission-docs) contains all the documentation for the project, except end-user documentation (which will be on the project web site) and [almost ALL THE ISSUES](https://github.com/e-mission/e-mission-docs/issues/).  
 
