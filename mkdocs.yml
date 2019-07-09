@@ -58,3 +58,5 @@ nav:
 - 5. Documenting: 
     - 'Contributing': 'contribute_to_the_doc/CONTRIBUTING.md'
     - 'Docs reorganisation' : 'contribute_to_the_doc/migration_reason.md'
+    
+theme: readthedocs
