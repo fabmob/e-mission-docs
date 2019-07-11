@@ -69,7 +69,7 @@ The uuidElementId is used by other external surveys, but not by LImeSurvey, you 
 
 We recommend to check everything before actually sending the survey :
 
-0) create the survey spec and query as explained in [Pushing Surveys from the Server to the Phone](../dev/front/pushing_surveys_from_the_server_to_the_phone.md)
+0) create the survey spec and query as explained in [Pushing Surveys from the Server to the Phone](pushing_surveys_from_the_server_to_the_phone.md)
 
 1a) use option -n for testing the query without sending the survey
 
