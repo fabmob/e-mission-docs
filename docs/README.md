@@ -1,5 +1,8 @@
 # Welcome to the Traceur FabMob e-mission Documentation!
 
+
+[![Documentation Status](https://readthedocs.org/projects/fabmob/badge/?version=latest&style=flat-square)](https://fabmob.readthedocs.io/en/latest/?badge=latest)
+
 **The documentation of Traceur Fabmob, a fork of e-mission, an open source phone-based personal mobility tracking software from UC Berkeley**. The doc is in English. (French docs are relative to end-user app manuel and evaluations and are to be found in the project site)
 
 ## Traceur Fabmob specific info:  
