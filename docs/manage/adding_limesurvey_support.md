@@ -46,6 +46,7 @@ For each new survey you will want to send, it will be necessary to quickly confi
 5. After the creation of the survey, into the settings of the survey go into *Survey menu -> Survey participants* and click on "Initialise participant table". 
 
 After customising your survey, you can now send it to the user ! To send a survey, you can check [Pushing Surveys from the Server to the Phone](https://github.com/e-mission/e-mission-docs/blob/master/docs/e-mission-server/pushing_surveys_from_the_server_to_the_phone.md). However, use `limesurvey.sample` into the `emission/net/ext_service/push/sample.specs/push` as example. The *survey id* (`sid`) can be found either at the end of the survey url or in the LimeSurvey interface into *Survey settings -> Overview*. 
+The uuidElementId is used by other external surveys, but not by LImeSurvey, you can pu any content here.
 
 ```json
 {
