@@ -62,6 +62,8 @@ After customising your survey, you can now send it to the user ! To send a surve
     }
 }
 ```
-.. warning::Before sending the notification to users, do not forget to **Activate** the survey by clicking on `Activate this survey`.
+.. warning::
+
+    Before sending the notification to users, do not forget to **Activate** the survey by clicking on `Activate this survey`.
 
 
