@@ -47,7 +47,7 @@ For each new survey you will want to send, it will be necessary to quickly confi
 
 ## Sending the LimeSurvey survey
 
-After customising your survey, you can now send it to the user ! To send a survey, you can check [Pushing Surveys from the Server to the Phone](https://github.com/e-mission/e-mission-docs/blob/master/docs/e-mission-server/pushing_surveys_from_the_server_to_the_phone.md). However, use `limesurvey.sample` into the `emission/net/ext_service/push/sample.specs/push` as example. The *survey id* (`sid`) can be found either at the end of the survey url or in the LimeSurvey interface into *Survey settings -> Overview*. 
+After customising your survey, you can now send it to the user ! To send a survey, you can check [Pushing Surveys from the Server to the Phone](pushing_surveys_from_the_server_to_the_phone.md). However, use `limesurvey.sample` into the `emission/net/ext_service/push/sample.specs/push` as example. The *survey id* (`sid`) can be found either at the end of the survey url or in the LimeSurvey interface into *Survey settings -> Overview*. 
 The uuidElementId is used by other external surveys, but not by LImeSurvey, you can pu any content here.
 
 ```json
@@ -71,24 +71,25 @@ We recommend to check everything before actually sending the survey :
 
 0) create the survey spec and query as explained in [Pushing Surveys from the Server to the Phone](../dev/front/pushing_surveys_from_the_server_to_the_phone.md)
 
-1) use option -n for testing the query without sending the survey
+1a) use option -n for testing the query without sending the survey
 
+```
+cd directory_e-mission-server
+conda activate emission
 ./e-mission-py.bash bin/push/send_survey.py -q /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/query/tripbike.json -n -s /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/push/bikesurvey.server.sample
-
+```
 This will the participant list (resulting from the query) in limesurvey for that survey.
 
 1b) send the survey to you to check it is Ok (without -n)
-
+```
 ./e-mission-py.bash bin/push/send_survey.py -e myaddress@mail.com -s /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/push/bikesurvey.server.sample
-
-2a) send now the survey for real (sans le -n)
-
+```
+2a) now send the survey for real (sans le -n)
+```
 ./e-mission-py.bash bin/push/send_survey.py -q /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/query/tripbike.json -n -s /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/push/bikesurvey.server.sample
-
+```
 2b) if necessary, add a user manually
-
+```
 ./e-mission-py.bash bin/push/send_survey.py -e address_to_add@mail.com -s /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/push/bikesurvey.server.sample
-
-
-
+```
 
