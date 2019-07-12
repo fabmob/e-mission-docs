@@ -86,7 +86,7 @@ If they do not contain analysis results, the script will print the line
 all entries in the timeline contain only raw data, need to run the intake pipeline
 ```
 
-In that case, you should [run the intake pipeline](https://github.com/e-mission/e-mission-docs/blob/master/docs/e-mission-server/deploying_your_own_server_to_production.md#the-analysis-pipeline) (`bin/intake_multiprocess.py`) to get the processed analysis results.
+In that case, you should [run the intake pipeline](../install/deploying_your_own_server_to_production.md#the-analysis-pipeline) (`bin/intake_multiprocess.py`) to get the processed analysis results.
 
 ### Clean up the loaded data ###
 You can also remove the data by using `bin/purge_database_json.py`, which will delete everything, or `bin/debug/purge_multi_timeline_for_range.py`, which will only delete the entries in that timeline - e.g.
