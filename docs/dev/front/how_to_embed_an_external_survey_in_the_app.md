@@ -98,4 +98,4 @@ SurveyLaunch.startSurveyForCompletedTrip("https://berkeley.qualtrics.com/jfe/for
 ```
 
 An example of a commit that implemented such a change is 
-https://github.com/e-mission/e-mission-phone/commit/46eb53952d379808f994903dbd9a9d5a935b127a
+[https://github.com/e-mission/e-mission-phone/commit/46eb53952d379808f994903dbd9a9d5a935b127a](https://github.com/e-mission/e-mission-phone/commit/46eb53952d379808f994903dbd9a9d5a935b127a)

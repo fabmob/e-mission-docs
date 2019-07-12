@@ -2,20 +2,19 @@
 ---
 
 #### How do you deploy a custom UI on the base app? ####
-https://github.com/e-mission/e-mission-phone/wiki/You-have-a-branch-for-your-custom-client.-Now-what%3F
-
+Check [You have a branch for your custom client. Now what?](you_have_a_branch_for_your_custom_client_now_what.md)
 #### I get a blank screen while loading the e-mission phone UI ####
 This is the White Screen Of Death (WSOD) and typically indicates that you have an error preventing the scripts from loading.
 - First make sure that you have followed all setup instructions. Some of them download Javascript dependencies into the project. If they are not run, the files will be missing, and you will get errors. If in doubt, re-run the setup instructions, they are idempotent.
 - Next, check the UI logs in the terminal where you run the UI development server. UI logs are redirected by default, so if the error occurred after logging was set up, you can see the error there.
 - Otherwise, connect to the app using a debugger.
-  - For iOS, the debugger is built in to Safari (https://www.lifewire.com/how-to-enable-safari-develop-menu-2260894)
-  - for android, the debugger is built in to chrome (http://geeklearning.io/apache-cordova-and-remote-debugging-on-android/).
+  - For iOS, the debugger is built in to Safari ([https://www.lifewire.com/how-to-enable-safari-develop-menu-2260894](https://www.lifewire.com/how-to-enable-safari-develop-menu-2260894))
+  - for android, the debugger is built in to chrome ([http://geeklearning.io/apache-cordova-and-remote-debugging-on-android/](http://geeklearning.io/apache-cordova-and-remote-debugging-on-android/)).
   
 There is ample documentation on how to use these tools - e.g. search for "debug javascript error in cordova using safari" for tutorials, etc. You might also find [this video](https://people.eecs.berkeley.edu/~shankari/syntax_error_wsod.mov) useful.
 
 #### Can I connect the devapp to a real server with proper authentication for proper end-to-end testing? ####
-Yes. If you are using google auth, you [need to get keys from me and configure them](https://github.com/e-mission/e-mission-server/wiki/Configuring-authentication#more-detailsfaq). If you want to run the app on the phone for real end-to-end testing, [it is easier on android than on iOS](https://github.com/e-mission/e-mission-docs/blob/dev-app-auth-clarification/docs/overview/high_level_faq.md#how-to-get-the-app-onto-a-real-phone).
+Yes. If you are using google auth, you [need to get keys from me and configure them](https://github.com/e-mission/e-mission-server/wiki/Configuring-authentication#more-detailsfaq). If you want to run the app on the phone for real end-to-end testing, [it is easier on android than on iOS](./high_level_faq.md#how-to-get-the-app-onto-a-real-phone).
 
 #### How to get the app onto a real phone ####
 This really depends on whether you still plan to change the UI, or whether you are largely done with the UI changes and want to build a custom app for deployment, potentially with a different set of plugins.

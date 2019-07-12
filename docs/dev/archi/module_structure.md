@@ -28,7 +28,7 @@ However, it is a complex project with a lot of modules, so we present a high lev
     - `api`: the webserver and our API interface to the outside world
       - `bottle.py`: lightweight webserver
       - `webapp.py`: file which defines the API interface
-    - `auth`: provider of authentication services. We will use only JWT based authentication, but there are many providers. Or we can integrate with something like https://oauth.io/home
+    - `auth`: provider of authentication services. We will use only JWT based authentication, but there are many providers. Or we can integrate with something like [https://oauth.io/home](https://oauth.io/home)
       - `abstract.py`: abstract interface to the auth provider
       - `none.py`: simple implementation that can be used for testing without registering for any keys
       - `google.py`: google's provider
@@ -54,7 +54,7 @@ However, it is a complex project with a lot of modules, so we present a high lev
       - `abstract.py`: abstract interface to the timeseries
       - `builtin.py`: builtin implementation using MongoDB collections
       - potentially others if we need performance improvements
-    - `decorations`: Meaningful decorations on the timeseries (see https://github.com/e-mission/e-mission-data-collection/wiki/Long-term-data-format-design-considerations). Do we need these in addition to wrapper classes? Think! What about different types of trips?
+    - `decorations`: Meaningful decorations on the timeseries (see [https://github.com/e-mission/e-mission-data-collection/wiki/Long-term-data-format-design-considerations](https://github.com/e-mission/e-mission-data-collection/wiki/Long-term-data-format-design-considerations)). Do we need these in addition to wrapper classes? Think! What about different types of trips?
       - `locations.py`
       - `trips.py`: utility queries to traverse the trip hierarchy?
       - `sections.py`

@@ -11,7 +11,7 @@
 ## Overall structure ##
 
 This ASCII diagram shows the parallel tree structures for the docs and assets.
-It is simplified and adapted from https://github.com/phonegap/phonegap-docs
+It is simplified and adapted from [https://github.com/phonegap/phonegap-docs](https://github.com/phonegap/phonegap-docs)
 
 ```
  e-mission-docs/

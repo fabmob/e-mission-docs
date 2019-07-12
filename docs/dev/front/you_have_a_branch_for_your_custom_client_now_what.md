@@ -11,15 +11,15 @@ Next steps after I have created a branch (e.g. `custom-ui`) for your custom clie
     OR
     $ git checkout -b add-new-feature
     ```
-- Make the changes you want to your branch, (https://github.com/e-mission/e-mission-phone/wiki/Phone-module-structure) potentially using existing branches (e.g. `cci-berkeley`, `interscity` or `opentoall`) as templates:
+- Make the changes you want to your branch, ([Phone module structure](../phone_module_structure.md)) potentially using existing branches (e.g. `cci-berkeley`, `interscity` or `opentoall`) as templates:
   - cherry-picking (`git cherry-pick`) the commits or sets of commits you want to use (better), OR
-  - downloading patches from individual pull requests (https://stackoverflow.com/questions/7827002/how-to-apply-a-git-patch-when-given-a-pull-number) OR
+  - downloading patches from individual pull requests ([https://stackoverflow.com/questions/7827002/how-to-apply-a-git-patch-when-given-a-pull-number](https://stackoverflow.com/questions/7827002/how-to-apply-a-git-patch-when-given-a-pull-number)) OR
   - downloading, editing and applying patches from individual commits if the commit history is badly mangled
     ```
     $ git show <commit> > /tmp/change.patch
     $ patch -i /tmp/change.patch
     ```
-- Potentially set up your own server (https://github.com/e-mission/e-mission-server/wiki/Deploying-your-own-server-to-production) and change the `www/json/connectionConfig.json` to point to it (https://github.com/e-mission/e-mission-server/wiki/Deploying-your-own-server-to-production#configuring-the-phone-app)
+- Potentially set up your own server ([Deploying your own server to production](../../install/deploying_your_own_server_to_production.md)) and change the `www/json/connectionConfig.json` to point to it ([Configuring the phone app](../../install/deploying_your_own_server_to_production.md#configuring-the-phone-app))
 - Commit and push changes to your branch (e.g. `add-new-feature`) on your repo https://github.com/your-username/e-mission-phone.git
 
    ```
@@ -28,6 +28,6 @@ Next steps after I have created a branch (e.g. `custom-ui`) for your custom clie
    ```
 - Generate pull request into the *`custom-ui`, not `master`* branch)
 - I will review for basic sanity, merge and deploy to your channel
-- Ask people to deploy from your channel (e.g. https://e-mission.eecs.berkeley.edu/#/client_setup?new_client=custom-ui&clear_usercache=true&clear_local_storage=true)
+- Ask people to deploy from your channel (e.g. [https://e-mission.eecs.berkeley.edu/#/client_setup?new_client=custom-ui&clear_usercache=true&clear_local_storage=true](https://e-mission.eecs.berkeley.edu/#/client_setup?new_client=custom-ui&clear_usercache=true&clear_local_storage=true))
 - ????
 - Knowledge!

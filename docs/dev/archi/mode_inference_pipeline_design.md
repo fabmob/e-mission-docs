@@ -19,7 +19,7 @@ Once we move to user-specific models, we can store them to the database. In fact
 So should it be stored on disk?
 
 Another thing to note is that we may want to continue to use the old-style (Moves) data until we build up a critical mass of new data. I just checked, and it is `14104 + 7439 = 21543` entries, which is pretty good. It looks like we can combine random forest models 
-https://stackoverflow.com/questions/28489667/combining-random-forest-models-in-scikit-learn
+[https://stackoverflow.com/questions/28489667/combining-random-forest-models-in-scikit-learn](https://stackoverflow.com/questions/28489667/combining-random-forest-models-in-scikit-learn) 
 Not sure about other models from scikit-learn.
 
 
