@@ -6,7 +6,7 @@ In addition to the normal survey support, it is possible to configure a LimeSurv
 ## Dependencies
 
 - Python **LimeSurvey RC2 API**, you can found it on GitHub by following this link :
-https://github.com/lindsay-stevens/limesurveyrc2api,
+[https://github.com/lindsay-stevens/limesurveyrc2api](https://github.com/lindsay-stevens/limesurveyrc2api),
 - [LimeSurvey](https://www.limesurvey.org/).
   
 ## Configuring LimeSurvey 

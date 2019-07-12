@@ -20,7 +20,7 @@ Alternatively, you can start a notebook server and run the notebook directly. In
 
 A [500 error code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#5xx_Server_errors) means that there was an exception thrown by the server code. Exceptions are typically printed to the console, so
 - if you started the server directly, they will be visible in the screen where you started the server, and
-- if you started the server [using supervisord](https://github.com/e-mission/e-mission-server/wiki/Deploying-your-own-server-to-production#the-webserver), they will be in the `stdout_logfile` (e.g. `/mnt/logs/emission/emissionpy.out.log` in the example)
+- if you started the server [using supervisord](../install/deploying_your_own_server_to_production.md#the-webserver), they will be in the `stdout_logfile` (e.g. `/mnt/logs/emission/emissionpy.out.log` in the example)
 
 ### Is the data getting to the server correctly? ###
 
@@ -149,19 +149,18 @@ In the script above:
 ```
 
 More sophisticated queries that work directly against the timeseries are at 
-https://github.com/e-mission/e-mission-server/blob/master/Timeseries_Sample.ipynb
-
+[https://github.com/e-mission/e-mission-server/blob/master/Timeseries_Sample.ipynb](https://github.com/e-mission/e-mission-server/blob/master/Timeseries_Sample.ipynb)
 They will only work once the intake pipeline has run and moved the data into the timeseries datastore.
 
 ### Trips on the phone stay in _draft_ (green background) forever ###
 
 Trips are converted from draft -> processed when the intake pipeline has been run successfully on them.
-- Instructions for running the intake pipeline for a single user (in debug mode): https://github.com/e-mission/e-mission-server#quick-start
-- Instructions for running the intake pipeline as part of a cronjob: https://github.com/e-mission/e-mission-server/wiki/Deploying-your-own-server-to-production#the-analysis-pipeline
+- Instructions for running the intake pipeline for a single user (in debug mode): [https://github.com/e-mission/e-mission-server#quick-start](https://github.com/e-mission/e-mission-server#quick-start)
+- Instructions for running the intake pipeline as part of a cronjob: [run the intake pipeline](../install/deploying_your_own_server_to_production.md#the-analysis-pipeline)
 
 #### Check 1: Was there an error while running the pipeline? ####
 
-The pipeline run logs are in the location configured in https://github.com/e-mission/e-mission-server/wiki/Deploying-your-own-server-to-production#configuring-logs (`/var/tmp`) by default. The logs are automatically compressed and should be viewed using `zless`/`bzless` or `zcat`/`bzcat`.
+The pipeline run logs are in the location configured in [Configuring logs](../install/deploying_your_own_server_to_production.md#configuring-logs) (`/var/tmp`) by default. The logs are automatically compressed and should be viewed using `zless`/`bzless` or `zcat`/`bzcat`.
 
 If all went well, you should see logs like the ones below, which indicate that user with UUID = 'f973520d-a339-44c8-bc02-6e35430a7b63' has trips for days `2017-09-03`, `2017-09-09` and `2017-09-10`.
 

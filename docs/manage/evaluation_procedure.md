@@ -19,7 +19,7 @@ The high-level procedure to perform a new experiment with this method is as foll
 There are two main limitations with the current version of the procedure:
 - any testing of the phone in the active state (user interacts with while
   stationary) is currently manual. See
-https://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-119.html for more
+[https://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-119.html](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-119.html) for more
 details
 - the evaluation trips are currently unimodal and support only CAR, WALKING and
   BICYCLING. Attempts to experiment with autofilling public transit routes are
@@ -55,7 +55,7 @@ copied over and edited as necessary. The various sections of the spe are:
 ## fill in the evaluation spec with queryable details and validate it ##
 
 The evaluation code is in the
-https://github.com/e-mission/e-mission-eval-public-data repository.
+[https://github.com/e-mission/e-mission-eval-public-data](https://github.com/e-mission/e-mission-eval-public-data) repository.
 
 ```
 $ git clone https://github.com/e-mission/e-mission-eval-public-data
@@ -83,7 +83,7 @@ that the trips look fine
 $ python upload_validated_spec.py <datastore_url> <evaluation_author_email> evaluation.spec.filled.json
 ```
 
-- `datastore_url`: if using the emevalzephyr channel, this is currently http://cardshark.cs.berkeley.edu:8888 This is likely to change after the primary author @shankari graduates.
+- `datastore_url`: if using the emevalzephyr channel, this is currently [http://cardshark.cs.berkeley.edu:8888](http://cardshark.cs.berkeley.edu:8888) This is likely to change after the primary author @shankari graduates.
 - `evaluation_author_email` is an arbitrary string. However, it is key to retrieving the related data so it would be good to make it memorable. The spec creator's public email address is probably a reasonable option for now.
 
 ## install the evaluation app(s) on the test phones and configure them ##
@@ -103,7 +103,7 @@ Note that as part of selecting the evaluation, the current phone is matched to i
 
 1. Select the same calibration regime on all the phones
 1. Check that the data is being collected properly by using the
-`Validate_calibration` https://github.com/e-mission/e-mission-eval-public-data/blob/master/calibration_templates/Validate_calibration.ipynb notebook
+`Validate_calibration` [https://github.com/e-mission/e-mission-eval-public-data/blob/master/calibration_templates/Validate_calibration.ipynb](https://github.com/e-mission/e-mission-eval-public-data/blob/master/calibration_templates/Validate_calibration.ipynb) notebook
 1. If some of the phones do not have any transitions sent to the server yet,
 use Profile -> Force Sync to force them to send the data and ensure that the
 connection to the server is stable

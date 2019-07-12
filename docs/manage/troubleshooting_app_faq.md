@@ -133,7 +133,7 @@ and on iOS, use
 #### Accessing the log on your computer ####
 These entries are saved into a log database on the phone. The log database can be emailed from the app (Profile -> Email log).
 
-The resulting email has the sqlite `loggerDB` database as an attachment. The log can be opened in sqlite, which is included in the anaconda distribution required by the server (https://github.com/e-mission/e-mission-server#python-distribution)
+The resulting email has the sqlite `loggerDB` database as an attachment. The log can be opened in sqlite, which is included in the anaconda distribution required by the server ([https://github.com/e-mission/e-mission-server#python-distribution](https://github.com/e-mission/e-mission-server#python-distribution))
 
 ```
 $ sqlite3 /tmp/loggerDB
