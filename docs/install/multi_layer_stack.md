@@ -3,7 +3,7 @@
 
 The e-mission server stack can be configured in many ways, depending on the duration of data collection, the size of the sample, and the amount of background processing required.
 
-The single server installation (https://github.com/e-mission/e-mission-server/wiki/Deploying-your-own-server-to-production) is best for small-medium scale data collection (~ 2000 person hours of data), without any ongoing analysis. For any larger scale data collection (~ 10,000 person hours of data), you want a more sophisticated, multi-tier architecture. While your final architecture will depend on your exact requirements and available resources, this document outlines the architecture and setup that I use for the reference e-mission private data server and the e-mission open data server.
+The single server installation [Deploying your own server to production](deploying_your_own_server_to_production.md) is best for small-medium scale data collection (~ 2000 person hours of data), without any ongoing analysis. For any larger scale data collection (~ 10,000 person hours of data), you want a more sophisticated, multi-tier architecture. While your final architecture will depend on your exact requirements and available resources, this document outlines the architecture and setup that I use for the reference e-mission private data server and the e-mission open data server.
 
 ## Overview ##
 
@@ -24,16 +24,16 @@ In addition, security groups enforce that the database can receive connections t
 
 ## Provisioning ##
 
-The VPC with all servers and networking setup can be created on AWS using CloudFormation (https://aws.amazon.com/cloudformation/). The template is available at
-- https://s3.amazonaws.com/emission-cloudformation-us-east-1/emission-aws-cloud-formation-template.json for direct use
-- https://github.com/e-mission/e-mission-server/blob/master/setup/aws-cloud-formation.json for a checked-in version
+The VPC with all servers and networking setup can be created on AWS using CloudFormation ([https://aws.amazon.com/cloudformation/](https://aws.amazon.com/cloudformation/)). The template is available at
+- [https://s3.amazonaws.com/emission-cloudformation-us-east-1/emission-aws-cloud-formation-template.json](https://s3.amazonaws.com/emission-cloudformation-us-east-1/emission-aws-cloud-formation-template.json) for direct use
+- [https://github.com/e-mission/e-mission-server/blob/master/setup/aws-cloud-formation.json](https://github.com/e-mission/e-mission-server/blob/master/setup/aws-cloud-formation.json) for a checked-in version
 
 It will create resources whose names start with the prefix that you specify when you deploy the CloudFormation stack - e.g. if you use the prefix `cci`, your servers will be `cci-webapp`, `cci-analysis`, `cci-notebooks`...
 
 #### Things to watch for ####
 
 Since CloudFormation has very limited support for ipv6 as of the end of 2017, the default provisioning primarily supports ipv4.
-https://github.com/e-mission/e-mission-server/issues/530#issuecomment-354061649
+[https://github.com/e-mission/e-mission-server/issues/530#issuecomment-354061649](https://github.com/e-mission/e-mission-server/issues/530#issuecomment-354061649)
 
 **Optional**: So if you want to optionally future-proof your setup and enable ipv6, you need to do so manually. Fortunately, the related steps are pretty straightforward. The provisioned routing tables and security groups do support ipv6 already - you just need to associate the addresses with the instances.
 
@@ -55,13 +55,13 @@ https://github.com/e-mission/e-mission-server/issues/530#issuecomment-354061649
         1. Instance now has an IP. "Cancel" to move to a different instance
 
 ## Setup ##
-The provisioning script sets up the hardware resources but does not configure the servers. While it is possible to add scripts that would also setup the servers, you may want to use `cryptfs` (https://github.com/e-mission/e-mission-server/wiki/Deploying-your-own-server-to-production#cryptfs-suggested) and putting the cryptfs password as a parameter would defeat the purpose of using cryptfs - we might as well use EBS encryption instead. I might revisit this later.
+The provisioning script sets up the hardware resources but does not configure the servers. While it is possible to add scripts that would also setup the servers, you may want to use `cryptfs` [Deploying your own server to production - cryptfs suggested](deploying_your_own_server_to_production.md#cryptfs-suggested) and putting the cryptfs password as a parameter would defeat the purpose of using cryptfs - we might as well use EBS encryption instead. I might revisit this later.
 
 These are the steps to set up the software on each of the servers:
 
 ### database server ###
 Use the mongodb EC2 instructions for setting up the database server.
-https://docs.mongodb.com/ecosystem/platforms/amazon-ec2/#deploy-mongodb-ec2
+[https://docs.mongodb.com/ecosystem/platforms/amazon-ec2/#deploy-mongodb-ec2](https://docs.mongodb.com/ecosystem/platforms/amazon-ec2/#deploy-mongodb-ec2)
 The provisioning step should have already setup `data`, `journal` and `log` EB2 volumes for you to mount.
 Note that you do not need to install any emission software on the database server. We could theoretically switch this to a managed database service later if we could address the privacy concerns.
 
@@ -104,12 +104,12 @@ Note that you do not need to install any emission software on the database serve
 
     Complete!
     ```
-1. If you are going to encrypt the filesystems, you need to do so before mounting them (https://github.com/e-mission/e-mission-server/wiki/Deploying-your-own-server-to-production#cryptfs-suggested)
-1. You need to bind to the private IP address so that the DB server can be accessed by the web and analysis servers - e.g. in `/etc/mongod.conf`, in addition to setting `dbpath` and `logpath` (https://docs.mongodb.com/ecosystem/platforms/amazon-ec2/#deploy-mongodb-ec2), set
+1. If you are going to encrypt the filesystems, you need to do so before mounting them ([Deploying your own server to production - cryptfs suggested](deploying_your_own_server_to_production.md#cryptfs-suggested))
+1. You need to bind to the private IP address so that the DB server can be accessed by the web and analysis servers - e.g. in `/etc/mongod.conf`, in addition to setting `dbpath` and `logpath` ([https://docs.mongodb.com/ecosystem/platforms/amazon-ec2/#deploy-mongodb-ec2](https://docs.mongodb.com/ecosystem/platforms/amazon-ec2/#deploy-mongodb-ec2)), set
    ```
    bindIp: 127.0.0.1,<private ipv4 IP>,
    ```
-1. If you want to use ipv6 to talk to the database server (at least internally), you need to enable ipv6, and listen to an ipv6 address - e.g. in `/etc/mongod.conf`, in addition to setting `dbpath` and `logpath` (https://docs.mongodb.com/ecosystem/platforms/amazon-ec2/#deploy-mongodb-ec2), set
+1. If you want to use ipv6 to talk to the database server (at least internally), you need to enable ipv6, and listen to an ipv6 address - e.g. in `/etc/mongod.conf`, in addition to setting `dbpath` and `logpath` ([https://docs.mongodb.com/ecosystem/platforms/amazon-ec2/#deploy-mongodb-ec2](https://docs.mongodb.com/ecosystem/platforms/amazon-ec2/#deploy-mongodb-ec2)), set
 
    ```
    net:
@@ -139,17 +139,17 @@ $ sudo mount /log
 $ sudo chown -R ubuntu:ubuntu /code
 $ sudo chown -R ubuntu:ubuntu /log
 ```
-- Clone the `e-mission-server` repo (https://github.com/e-mission/e-mission-server) to `/code` and set it up using miniconda (https://github.com/e-mission/e-mission-server#python-distribution)
-- Configure the port, auth, and other integrations (https://github.com/e-mission/e-mission-server/wiki/Deploying-your-own-server-to-production#configure-the-server)
+- Clone the `e-mission-server` repo ([https://github.com/e-mission/e-mission-server](https://github.com/e-mission/e-mission-server)) to `/code` and set it up using miniconda ([https://github.com/e-mission/e-mission-server#python-distribution](https://github.com/e-mission/e-mission-server#python-distribution))
+- Configure the port, auth, and other integrations [Deploying your own server to production - Configure the server](deploying_your_own_server_to_production.md##configure-the-server)
 - Get the javascript packages
 - Set the database (`db.conf.json`) to the IP address of the database server
-- Start the webserver, preferably with a watchdog (https://github.com/e-mission/e-mission-server/wiki/Deploying-your-own-server-to-production#the-webserver)
+- Start the webserver, preferably with a watchdog [Deploying your own server to production - The webserver](deploying_your_own_server_to_production.md#the-webserver)
 
 Things to watch for:
-1. You have to install bower (https://stackoverflow.com/questions/21491996/installing-bower-on-ubuntu)
-2. The webapp has outbound requests to 9418 enabled by default to support retrieving bower packages over `git://`. You can also use rewrites instead (https://stackoverflow.com/questions/1722807/how-to-convert-git-urls-to-http-urls) and disable that rule for greater control.
+1. You have to install bower ([https://stackoverflow.com/questions/21491996/installing-bower-on-ubuntu](https://stackoverflow.com/questions/21491996/installing-bower-on-ubuntu))
+2. The webapp has outbound requests to 9418 enabled by default to support retrieving bower packages over `git://`. You can also use rewrites instead ([https://stackoverflow.com/questions/1722807/how-to-convert-git-urls-to-http-urls](https://stackoverflow.com/questions/1722807/how-to-convert-git-urls-to-http-urls)) and disable that rule for greater control.
 1. If you are running over SSL (please do!), change the inbound rules on the webapp security group from HTTP -> HTTPS.
-4. Although the EBS volumes are added to the instance as `/dev/sdf` and `/dev/sdg`, they are visible on the host as `/dev/nvme*n1` (http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nvme-ebs-volumes.html)
+4. Although the EBS volumes are added to the instance as `/dev/sdf` and `/dev/sdg`, they are visible on the host as `/dev/nvme*n1` ([http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nvme-ebs-volumes.html](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nvme-ebs-volumes.html))
 5. If you consistently get a message `sudo: unable to resolve host ip-192-168-0-80` while running the sudo commands, you can add a mapping to `/etc/hosts`
    ```
    192.168.0.80 ip-192-168-0-80
@@ -157,10 +157,10 @@ Things to watch for:
 6. Don't forget to change the log configurations (`conf/log`) to store the logs in `/log` instead of `/var/tmp`
 
 ### analysis server ###
-- Clone the `e-mission-server` repo (https://github.com/e-mission/e-mission-server).
+- Clone the `e-mission-server` repo ([https://github.com/e-mission/e-mission-server](https://github.com/e-mission/e-mission-server)).
 - Configure the integrations that you need
 - Set the database (`db.conf.json`) to the IP address of the database server
-- Set up the pipeline cronjobs (https://github.com/e-mission/e-mission-server/wiki/Deploying-your-own-server-to-production#the-analysis-pipeline)
+- Set up the pipeline cronjobs ([Deploying your own server to production - The analysis pipeline](deploying_your_own_server_to_production.md#the-analysis-pipeline))
 
 ### notebook server ###
 You have two main approaches for exploratory analysis on the data collected.
@@ -168,8 +168,8 @@ You have two main approaches for exploratory analysis on the data collected.
 2. *Code to data*: Run the analyses directly against the data. If you want to use this approach, you want to set up a notebook server with direct access to the database.
 
 If you choose (2), there are two ways to set it up:
-1. Use a password-protected server, either shared (http://jupyter-notebook.readthedocs.io/en/stable/public_server.html) or with JupyterHub (https://jupyterhub.readthedocs.io/en/latest/)
-1. Use ssh redirect. Assuming you have ssh access to the notebook server, you can use local port forwarding to connect a port on your laptop to the notebook server. to a local port on your laptop and then access `localhost:<local_port>` (https://help.ubuntu.com/community/SSH/OpenSSH/PortForwarding).
+1. Use a password-protected server, either shared ([http://jupyter-notebook.readthedocs.io/en/stable/public_server.html](http://jupyter-notebook.readthedocs.io/en/stable/public_server.html)) or with JupyterHub ([https://jupyterhub.readthedocs.io/en/latest/](https://jupyterhub.readthedocs.io/en/latest/))
+1. Use ssh redirect. Assuming you have ssh access to the notebook server, you can use local port forwarding to connect a port on your laptop to the notebook server. to a local port on your laptop and then access `localhost:<local_port>` ([https://help.ubuntu.com/community/SSH/OpenSSH/PortForwarding](https://help.ubuntu.com/community/SSH/OpenSSH/PortForwarding)).
 
     ```
     $ ./e-mission-jupyter.bash notebook --config  ~/.jupyter/jupyter_notebook_config_private.py --notebook-dir /notebooks
@@ -193,7 +193,7 @@ If you choose (2), there are two ways to set it up:
 
 #### Things to watch for ####
 1. Create a new user to run the notebooks. This will ensure that you don't inadvertently (or in the case of a public server, maliciously) do something stupid and irrevocable. Note that the default ubuntu user has passwordless sudo, so options for messing up are endless.
-   1. You probably want to create the user as a system user so that you don't have to remember a new password (https://github.com/e-mission/e-mission-server/issues/530#issuecomment-351896967). You can execute commands as the newly created system user using `su` (https://askubuntu.com/questions/294736/run-a-shell-script-as-another-user-that-has-no-password)
+   1. You probably want to create the user as a system user so that you don't have to remember a new password ([https://github.com/e-mission/e-mission-server/issues/530#issuecomment-351896967](https://github.com/e-mission/e-mission-server/issues/530#issuecomment-351896967)). You can execute commands as the newly created system user using `su` ([https://askubuntu.com/questions/294736/run-a-shell-script-as-another-user-that-has-no-password](https://askubuntu.com/questions/294736/run-a-shell-script-as-another-user-that-has-no-password))
 2. You can mount a separate disk just for the notebooks. The default provisioning will create a `prefix-notebook-notebooks` EBS drive for this. You can mount this as `/notebooks`, set the ownership to the newly created user, and start the notebook server with `--notebook-dir=/notebooks`
 
     ```
@@ -213,9 +213,9 @@ Even if the network only allows connections from certain hosts, we still need to
 - to support different read-write behavior for different connections if running an exploratory ipython notebook server
 
 Steps to do this are:
-1. decide admin, read-write and read-only usernames and passwords. You can use https://xkpasswd.net or http://correcthorsebatterystaple.net/ to generate xkcd-compliant passwords, or something like https://www.random.org/passwords/ for more token-like passwords.
+1. decide admin, read-write and read-only usernames and passwords. You can use [https://xkpasswd.net](https://xkpasswd.net) or [http://correcthorsebatterystaple.net/](http://correcthorsebatterystaple.net/) to generate xkcd-compliant passwords, or something like [https://www.random.org/passwords/](https://www.random.org/passwords/) for more token-like passwords.
 1. edit the settings at the top of the `setup/db_auth.py`. Run the script and create users.
-https://github.com/e-mission/e-mission-server/issues/530#issuecomment-351578786
+[https://github.com/e-mission/e-mission-server/issues/530#issuecomment-351578786](https://github.com/e-mission/e-mission-server/issues/530#issuecomment-351578786)
 1. Turn on auth on the db server
    1. Use the `--auth` command line option
    1. Edit the `/etc/mongod.conf` file to enable authorization

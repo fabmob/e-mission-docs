@@ -52,12 +52,12 @@ couple_honcho_abbot_obtain_simple
 #### Generating a token list ####
 Generating a large, valid token list is important to ensure security. For users who are not comfortable with scripting, random.org's password generator is a good option. To use it:
 
-1. Go to https://www.random.org/passwords/
+1. Go to [https://www.random.org/passwords/](https://www.random.org/passwords/)
 1. Switch to advanced mode
 1. *IMPORTANT* Select "bare-bones text document" output
 1. Copy and paste the generated passwords into a text editor.
    - Built-in text editors are: Notepad on windows and vi/vim on \*ix and OSX
-   - You can also download text editors such as vim (https://vim.sourceforge.io/download.php#pc), Sublime Text (http://www.sublimetext.com/3) and Atom (https://atom.io/)
+   - You can also download text editors such as vim ([https://vim.sourceforge.io/download.php#pc](https://vim.sourceforge.io/download.php#pc)), Sublime Text ([http://www.sublimetext.com/3](http://www.sublimetext.com/3)) and Atom ([https://atom.io/](https://atom.io/))
    - Do *NOT* use document editors such as microsoft word - they might add additional formatting that will mess up the token matching.
 1. Save as plain text
 

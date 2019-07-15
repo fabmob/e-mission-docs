@@ -118,7 +118,7 @@ The server needs three ongoing processes. The instructions here are for *nix sys
 #### The webserver ####
   It would be good to have this set up with a watchdog so that it can
   automatically restart if it goes down (e.g. due to out of memory errors).  I
-  use the `supervisord` watchdog (http://supervisord.org/). If you want to use
+  use the `supervisord` watchdog ([http://supervisord.org/](http://supervisord.org/)). If you want to use
   the same, the e-mission configuration that I use is
 
    ```
@@ -132,14 +132,14 @@ The server needs three ongoing processes. The instructions here are for *nix sys
    ```
   where `/code/` and `/log/` are separate encrypted filesystems.
 
-  1. Note that supervisord only runs on python 2.7, although e-mission is now on python 3.6. You need to set up a parallel py27 environment to run it. https://github.com/e-mission/e-mission-server/issues/530#issuecomment-351776014
+  1. Note that supervisord only runs on python 2.7, although e-mission is now on python 3.6. You need to set up a parallel py27 environment to run it. [https://github.com/e-mission/e-mission-server/issues/530#issuecomment-351776014](https://github.com/e-mission/e-mission-server/issues/530#issuecomment-351776014)
 
   ```
   $ conda create -n py27 python=2.7
   $ source activate py27
   ```
   
-  2. Setup supervisord and configure it based on the instructions (http://supervisord.org/installing.html) - e.g.
+  2. Setup supervisord and configure it based on the instructions ([http://supervisord.org/installing.html](http://supervisord.org/installing.html)) - e.g.
 
   ```
   $ pip install supervisor
@@ -149,7 +149,7 @@ The server needs three ongoing processes. The instructions here are for *nix sys
   3. Since supervisord will run from the `py27` environment, but we want e-mission to run from the `emission` environment, use an absolute path in the batch file `/code/e-mission-server/e-mission-py.bash` by replacing `python -> /home/ubuntu/miniconda3/envs/emission/bin/python`.
 
 
-  3. Run supervisord (http://supervisord.org/running.html) - e.g.
+  3. Run supervisord ([http://supervisord.org/installing.html](http://supervisord.org/running.html)) - e.g.
 
    ```
    $ supervisord -c ~/supervisord.conf
@@ -161,7 +161,7 @@ The server needs three ongoing processes. The instructions here are for *nix sys
 
 ##### Windows #####
 The suggestion to replace supervisord is to use honcho or a windows service. Note that there might be tricky things to do with a batch file and polling to actually get watchdog functionality. Alternatively, you can use cygwin and apparently then supervisord just works.
-https://stackoverflow.com/questions/7629813/is-there-windows-analog-to-supervisord
+[https://stackoverflow.com/questions/7629813/is-there-windows-analog-to-supervisord](https://stackoverflow.com/questions/7629813/is-there-windows-analog-to-supervisord)
 
 #### The analysis pipeline ####
 
@@ -174,13 +174,13 @@ This pipeline segments the trips, segments legs within the trips, smoothes, assi
 ##### Windows #####
 The suggestion to replace cron is to use the scheduled tasks from the control panel, or the schtasks cmdlets from Windows powershell.
 
-https://stackoverflow.com/questions/132971/what-is-the-windows-version-of-cron
+[https://stackoverflow.com/questions/132971/what-is-the-windows-version-of-cron](https://stackoverflow.com/questions/132971/what-is-the-windows-version-of-cron)
 
-https://technet.microsoft.com/en-us/library/cc725744(v=ws.11).aspx
+[https://technet.microsoft.com/en-us/library/cc725744(v=ws.11).aspx](https://technet.microsoft.com/en-us/library/cc725744(v=ws.11).aspx)
 
 You can also install cygwin and get it to work with some effort.
 
-https://stackoverflow.com/questions/707184/how-do-you-run-a-crontab-in-cygwin-on-windows
+[https://stackoverflow.com/questions/707184/how-do-you-run-a-crontab-in-cygwin-on-windows](https://stackoverflow.com/questions/707184/how-do-you-run-a-crontab-in-cygwin-on-windows)
 
 
 #### The iOS silent push ####
@@ -197,7 +197,7 @@ using `cron`.
 @hourly cd /mnt/e-mission/e-mission-server && PYTHONPATH=. /home/ubuntu/anaconda/bin/python bin/push/silent_ios_push.py 3600 >> /home/e-mission/silent_ios_push.stdinoutlog 2>&1
 ```
 ##### Windows #####
-These are also cronjobs so the same techniques as the previous section (https://github.com/e-mission/e-mission-server/wiki/Deploying-your-own-server-to-production/_edit#windows-1) apply.
+These are also cronjobs so the same techniques as the previous section ([previous section](#the-ios-silent-push)) apply.
 
 ## Suggested improvements ##
 
@@ -205,9 +205,9 @@ These are also cronjobs so the same techniques as the previous section (https://
 If you are running your server on a cloud provider, and want to ensure that the
 cloud provider cannot access your data by looking at the files directly, you need to encrypt your filesystem. Some cloud providers provide encrypted storage solutions such as EBS on AWS, but they do not allow you to specify the encryption key (*NOTE*: This may have recently changed. Need to look up AWS key management services).
 
-In order to have more control, you can use an encrypted filesystem such as cryptfs. Instructions for using cryptfs on ubuntu are at http://sleepyhead.de/howto/?href=cryptpart. You want to ensure that the partitions for data and logs are encrypted - data for obvious reasons, and logs because they print a lot of private information that can potentially be reconstructed.
+In order to have more control, you can use an encrypted filesystem such as cryptfs. Instructions for using cryptfs on ubuntu are at [http://sleepyhead.de/howto/?href=cryptpart](http://sleepyhead.de/howto/?href=cryptpart). You want to ensure that the partitions for data and logs are encrypted - data for obvious reasons, and logs because they print a lot of private information that can potentially be reconstructed.
 
-In order to ensure that a disk is mount encrypted, use the cryptfs instruction to create and open it in encrypted mode. Then you can simply replace the instructions using an unencrypted disk with the instructions for using an encrypted disk. For example, if you were going to use `/dev/foo`, you would first follow the instructions at http://sleepyhead.de/howto/?href=cryptpart to get `/dev/mapper/foo`. Then instead of creating a filesystem on and mounting `/dev/foo`, you would perform the same operations on `/dev/mapper/foo`.
+In order to ensure that a disk is mount encrypted, use the cryptfs instruction to create and open it in encrypted mode. Then you can simply replace the instructions using an unencrypted disk with the instructions for using an encrypted disk. For example, if you were going to use `/dev/foo`, you would first follow the instructions at [http://sleepyhead.de/howto/?href=cryptpart](http://sleepyhead.de/howto/?href=cryptpart) to get `/dev/mapper/foo`. Then instead of creating a filesystem on and mounting `/dev/foo`, you would perform the same operations on `/dev/mapper/foo`.
 
 #### Decrypt + mount after reboot ####
 Note that if you encrypt the filesystem, you will need to decrypt the
@@ -249,7 +249,7 @@ The easiest option is to connect using the DB server hostname/IP - e.g.
 _current_db = MongoClient('192.168.0.5').Stage_database
 ```
 
-but you can also use more complex configurations if your DB server is sharded, for example. A full list of the connection options is at http://api.mongodb.com/python/2.7/api/pymongo/mongo_client.html#pymongo.mongo_client.MongoClient
+but you can also use more complex configurations if your DB server is sharded, for example. A full list of the connection options is at [http://api.mongodb.com/python/2.7/api/pymongo/mongo_client.html#pymongo.mongo_client.MongoClient](http://api.mongodb.com/python/2.7/api/pymongo/mongo_client.html#pymongo.mongo_client.MongoClient)
 
 Make sure to set up a NAT and put your database server into it to reduce the
 risk of unauthorized access.

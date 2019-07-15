@@ -17,7 +17,7 @@ is as simple as cloning the github repository.
   $ git clone https://github.com/e-mission/e-mission-server.git
   ```
 
-- If you might make changes or develop new features, fork (https://help.github.com/articles/fork-a-repo/) and clone your fork.
+- If you might make changes or develop new features, fork ([https://help.github.com/articles/fork-a-repo/](https://help.github.com/articles/fork-a-repo/)) and clone your fork.
 
   ```
   $ git clone https://github.com/<username>/e-mission-server.git
@@ -32,7 +32,7 @@ is as simple as pulling new changes.
   $ git pull origin master
   ```
 
-- If you are working off your fork, you will need to sync your fork with the main repository (https://help.github.com/articles/syncing-a-fork/) and then pull from your fork.
+- If you are working off your fork, you will need to sync your fork with the main repository ([https://help.github.com/articles/syncing-a-fork/](https://help.github.com/articles/syncing-a-fork/)) and then pull from your fork.
 
   ```
   $ git pull origin master
@@ -44,8 +44,8 @@ is as simple as pulling new changes.
 ### Database: ###
 1. Install [Mongodb](http://www.mongodb.org/), version 3.4
   2. *Windows*: mongodb appears to be installed as a service on Windows devices and it starts automatically on reboot
-  3. *OSX*: You want to install homebrew and then use homebrew to install mongodb. Follow these instruction on how to do so ---> (https://docs.mongodb.com/v3.4/tutorial/install-mongodb-on-ubuntu/)
-  4. *Ubuntu*: http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
+  3. *OSX*: You want to install homebrew and then use homebrew to install mongodb. Follow these instruction on how to do so ---> ([https://docs.mongodb.com/v3.4/tutorial/install-mongodb-on-ubuntu/](https://docs.mongodb.com/v3.4/tutorial/install-mongodb-on-ubuntu/))
+  4. *Ubuntu*: [http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
 
 2. Start it at the default port
 
@@ -65,12 +65,12 @@ management tool called 'conda'.
 The distribution also includes an environment management tool called 'conda'. We will set up a separate `emission`
 environment within anaconda to avoid conflicts with other applications.
 
-- Install the anaconda distribution (https://www.anaconda.com/download). Any
+- Install the anaconda distribution ([https://www.anaconda.com/download](https://www.anaconda.com/download)). Any
   installer should be fine - setting up the `emission` environment will
   automatically choose the correct version of python. Since all required
   packages will be installed using the environment, if you are comfortable with
   the command line, you can also download the minimalist `miniconda` installer
-  https://conda.io/miniconda.html
+  [https://conda.io/miniconda.html](https://conda.io/miniconda.html)
 
 - Setup the `emission` environment.
 
@@ -97,7 +97,7 @@ environment within anaconda to avoid conflicts with other applications.
   root                     /..../anaconda
   ```
   
-- If you have setup the environment already and just need to switch to it, you can also use `source activate emission` to switch to the emission environment. To switch out of the emission environment, or to manipulate it in other ways, read the conda documentation on environments https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html Note that depending on the version of conda that you have installed, you may use `conda activate` or `source activate`
+- If you have setup the environment already and just need to switch to it, you can also use `source activate emission` to switch to the emission environment. To switch out of the emission environment, or to manipulate it in other ways, read the conda documentation on environments [https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) Note that depending on the version of conda that you have installed, you may use `conda activate` or `source activate`
 
 - Remember to re-run the setup script every time you pull from the main repository because the dependencies may have changed.
 
