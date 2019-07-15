@@ -40,7 +40,7 @@ The only parameter is the path to the file with the list of pre-created tokens -
 }
 ```
 
-where `conf/net/token_list` is something like (from https://github.com/redacted/XKCD-password-generator)
+where `conf/net/token_list` is something like (from [https://github.com/redacted/XKCD-password-generator](https://github.com/redacted/XKCD-password-generator))
 
 ```
 correct_horse_battery_staple
@@ -85,12 +85,12 @@ This option uses JWTs using the google identity solution with [cross-client auth
 
 #### Configuration ####
 
-- create `android`, `ios` and `web application` credentials in the same project at https://console.developers.google.com
+- create `android`, `ios` and `web application` credentials in the same project at [https://console.developers.google.com](https://console.developers.google.com)
 - use the `web application` key for android
 - use the `ios` key for iOS, but encoded into the native app as a URL type
 - the `android` key is not used directly, but is required to be in the project to allow the android authentication to proceed
 
-![Google Auth Screenshot](../../assets/e-mission-both/google_auth_screenshot.png)
+![Google Auth Screenshot](../assets/e-mission-both/google_auth_screenshot.png)
 
 If you have just created a set of keys, you can just duplicate them to make the old and new keys - e.g. in `conf/net/auth/google_auth.json`
 
@@ -123,7 +123,7 @@ If you have just created a set of keys, you can just duplicate them to make the 
         
         | Selection | Configuration | Success |
         | --------  | ------------- | --------|
-        | ![Selection](../../assets/e-mission-both/google_auth_client_id_selection.png) | ![Configuration](../../assets/e-mission-both/google_auth_client_id_creation_screen.png) | ![Success](../../assets/e-mission-both/google_auth_client_id_success.png) |
+        | ![Selection](../assets/e-mission-both/google_auth_client_id_selection.png) | ![Configuration](../assets/e-mission-both/google_auth_client_id_creation_screen.png) | ![Success](../assets/e-mission-both/google_auth_client_id_success.png) |
 
     1. **Q:** For ios, do we use `webapp` or `ios`  as application type? 
 

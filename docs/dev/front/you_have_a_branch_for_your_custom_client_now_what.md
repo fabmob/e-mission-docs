@@ -11,7 +11,7 @@ Next steps after I have created a branch (e.g. `custom-ui`) for your custom clie
     OR
     $ git checkout -b add-new-feature
     ```
-- Make the changes you want to your branch, ([Phone module structure](../phone_module_structure.md)) potentially using existing branches (e.g. `cci-berkeley`, `interscity` or `opentoall`) as templates:
+- Make the changes you want to your branch, ([Phone module structure](phone_module_structure.md)) potentially using existing branches (e.g. `cci-berkeley`, `interscity` or `opentoall`) as templates:
   - cherry-picking (`git cherry-pick`) the commits or sets of commits you want to use (better), OR
   - downloading patches from individual pull requests ([https://stackoverflow.com/questions/7827002/how-to-apply-a-git-patch-when-given-a-pull-number](https://stackoverflow.com/questions/7827002/how-to-apply-a-git-patch-when-given-a-pull-number)) OR
   - downloading, editing and applying patches from individual commits if the commit history is badly mangled

@@ -40,7 +40,7 @@ Both scone and graphene have architecture diagrams, but I liked the graphene one
 better because I felt that the increased detail made it clearer. Here's the
 diagram - Figure 3 from the paper.
 
-![Graphene architecture](../../../assets/future_work/graphene_arch_diagram.png)
+![Graphene architecture](../../assets/future_work/graphene_arch_diagram.png)
 
 In order to have a direct comparison, I tried to draw similar diagrams for the
 other two options as well. As you can see, there are multiple questions around
@@ -48,7 +48,7 @@ how some of the other options work.
 
 | Graphene | Scone | Intel SDK |
 |--------- | ----- | --------- |
-| ![Graphene architecture](../../../assets/future_work/graphene-arch.png) | ![Scone architecture](../../../assets/future_work/scone-arch.png) | ![Intel SDK architecture](../../../assets/future_work/intel-SDK-arch.png) |
+| ![Graphene architecture](../../assets/future_work/graphene-arch.png) | ![Scone architecture](../../assets/future_work/scone-arch.png) | ![Intel SDK architecture](../../assets/future_work/intel-SDK-arch.png) |
 
 ## Other questions
 

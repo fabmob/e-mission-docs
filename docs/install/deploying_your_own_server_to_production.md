@@ -44,7 +44,7 @@ conf/log/intake.conf.sample
 
 #### Configuring the webserver ####
 
-By default, the server runs over `http`. But for production systems, you should really use SSL. It's easy to use SSL, with services like https://letsencrypt.org/2014/11/18/announcing-lets-encrypt.html. Just do it now.
+By default, the server runs over `http`. But for production systems, you should really use SSL. It's easy to use SSL, with services like [https://letsencrypt.org/2014/11/18/announcing-lets-encrypt.html](https://letsencrypt.org/2014/11/18/announcing-lets-encrypt.html). Just do it now.
 
 We use cheroot to provide SSL support. The SSL certificate and private key should be specified in `conf/net/keys.json`. 
 ```
@@ -59,7 +59,7 @@ This is configured in two steps.
 - The auth method is configured in `conf/net/api/webserver.conf`
 - The settings for the auth method are configured in `conf/net/auth/<auth_method>.json`. 
 
-For more details on configuring an auth method, see https://github.com/e-mission/e-mission-docs/blob/master/docs/e-mission-both/configuring_authentication.md 
+For more details on configuring an auth method, see [Configuring authentication](configuring_authentication.md).
 
 #### Configuring push ####
 We use silent push notifications on iOS as a backup in case the visit
@@ -102,9 +102,9 @@ and then change the config to point to `/mnt/logs`, e.g.
 ```
 
 #### Configuring the phone app ####
-The connection settings on the phone are at `www/json/connectionConfig.json`. The sample file (`connectionConfig.production.json.sample`) should be filled in with the URL of the production server and the auth method from [Configuring Authentication](#configuring-authentication)
+The connection settings on the phone are at `www/json/connectionConfig.json`. The sample file (`connectionConfig.production.json.sample`) should be filled in with the URL of the production server and the auth method from [Configuring authentication](#configuring-authentication)
 
-Note, you should also cutomize your client-app with a custom server: [Create a new custom client](../e-mission-phone/create_a_new_custom_client.md).
+Note, you should also cutomize your client-app with a custom server: [Create a new custom client](../dev/front/create_a_new_custom_client.md).
 Currently, the aggregate related URLs (heatmap, metrics tab) are hardcoded. They need to be changed to your server URL in:
 
 - `www/js/heatmap.js`

@@ -105,7 +105,7 @@ You can start and end trips by directly manipulating the state machine in the de
 
 #### Access the data on the server ####
 
-When the data gets to the server, it is in the usercache. When the regular pipeline runs ([The Analysis Pipeline](../install/deploying_your_own_server_to_production.md#the-analysis-pipeline)), the formatters are run on it, and it moves from the usercache to the timeseries.
+When the data gets to the server, it is in the usercache. When the regular pipeline runs ([The Analysis Pipeline](../../install/deploying_your_own_server_to_production.md#the-analysis-pipeline)), the formatters are run on it, and it moves from the usercache to the timeseries.
 
 A unified view of the both the usercache and the timeseries is provided by the `cache_series` datastructure and can be used to confirm that the objects were saved correctly.
 ([Troubleshooting Server - Confirm that the entries are really in the database](../../manage/troubleshooting_server_faq#confirm-that-the-entries-are-really-in-the-database))
