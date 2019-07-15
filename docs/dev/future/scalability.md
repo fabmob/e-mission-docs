@@ -6,7 +6,7 @@ ambiguity around the metrics to use.
 
 Current e-mission scalability, at least for a fully functioning server, is poor. Before I
 set up the multi-tier system
-(https://github.com/e-mission/e-mission-server/issues/530), we were running on
+([https://github.com/e-mission/e-mission-server/issues/530](https://github.com/e-mission/e-mission-server/issues/530)), we were running on
 an m3.xlarge server (64-bit, 4 vCPU, 15 GB RAM). At that time, the analysis pipeline for ~ 50 active
 users would take more than a day to run. Even worse, the response time for
 users when the pipeline was running was pathetic, on the order of minutes
@@ -57,7 +57,7 @@ choice for a single datastore? etc
 ### Task list ###
 1. Create a workload generator. The work generator should consist of three parts:
     - _Synthetic data generator_: There is an existing trip generator
-      (https://github.com/e-mission/e-mission-server/tree/master/emission/simulation),
+      ([https://github.com/e-mission/e-mission-server/tree/master/emission/simulation](https://github.com/e-mission/e-mission-server/tree/master/emission/simulation)),
       however it is obsolete. We need to replace it with a generator that creates
       artificial data in the new format.
       - There won't be existing solutions for this since the data is specific
@@ -78,7 +78,7 @@ choice for a single datastore? etc
       server properly and launches the cronjobs.
       - There are approximately 1 million solutions for this. Use them. One of
         the current users (in Australia) supposedly worked on a Docker
-        configuration for e-mission. You can contact https://github.com/asiripanich to see if you
+        configuration for e-mission. You can contact [https://github.com/asiripanich](https://github.com/asiripanich) to see if you
         can start with that.
 1. Run various workloads against various deployment configurations and figure
 out how the server scales

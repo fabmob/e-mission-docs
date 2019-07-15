@@ -9,7 +9,7 @@ themselves.  Finally, if we want algorithm results to drive policy and choose
 between competing real-world alternatives, the inferences need to be generated
 from algorithms with well-defined error parameters.
 
-As Micheal Jordan argued in his blog post (https://rise.cs.berkeley.edu/blog/michael-i-jordan-artificial-intelligence%e2%80%8a-%e2%80%8athe-revolution-hasnt-happened-yet/):
+As Micheal Jordan argued in his blog post ([https://rise.cs.berkeley.edu/blog/michael-i-jordan-artificial-intelligence%e2%80%8a-%e2%80%8athe-revolution-hasnt-happened-yet/](https://rise.cs.berkeley.edu/blog/michael-i-jordan-artificial-intelligence%e2%80%8a-%e2%80%8athe-revolution-hasnt-happened-yet/)):
 
 > In the current era, we have a real opportunity to conceive of something
 > historically new — a human-centric engineering discipline.
@@ -18,7 +18,7 @@ These challenges are common across multiple domains. The standard technique to
 overcome them is to use benchmarking. For example, the ImageNet benchmark is
 commonly used to evaluate algorithms for image processing. The RISE lab has
 recently announced an initiative to identify benchmarking datasets for multiple
-common machine learning algorithms (https://rise.cs.berkeley.edu/blog/mlperf-spec-for-ml/).
+common machine learning algorithms ([https://rise.cs.berkeley.edu/blog/mlperf-spec-for-ml/](https://rise.cs.berkeley.edu/blog/mlperf-spec-for-ml/)).
 
 However, there are several specific challenges to working on location data and
 travel patterns.
@@ -36,7 +36,7 @@ data collection with smart algorithms? We will need to evaluate the data
 collection and inference together to answer such questions.
 4. As with all benchmarks, there are questions about how applicable the
 benchmark is. This is particularly true given the potentially combinatorial
-nature of multi-modal travel patterns (https://www.overleaf.com/read/khdbzrxsgkyz, section "Proposed Benchmarking Details") and the differences in modes between
+nature of multi-modal travel patterns ([https://www.overleaf.com/read/khdbzrxsgkyz](https://www.overleaf.com/read/khdbzrxsgkyz), section "Proposed Benchmarking Details") and the differences in modes between
 countries (e.g. developed countries typically focus on 5 modes - walk, bicycle,
 bus, car, train, but developing countries make heavy use of motorcycles and
 informal transit). While this can theoretically be handled by expanding the
@@ -46,7 +46,7 @@ Before we discuss how to address these challenges, let us understand the
 two broad evaluation mechanisms.
 - **data to code**: ground-truthed datasets are made publicly available,
   researchers download them and run their algorithms on them (e.g. MNIST,
-  http://yann.lecun.com/exdb/mnist/)
+  [http://yann.lecun.com/exdb/mnist/](http://yann.lecun.com/exdb/mnist/))
 - **code to data**: researchers upload their code, system runs it against the data
   and generates a score. If multiple researchers submit algorithms, they can
   compete to get the best results. Note that in this case, the underlying data
@@ -140,10 +140,10 @@ people can choose to tackle.
 - Build a prompting mechanism that potentially works with an ensemble of
   regular algorithms and an attention budget. A SUPERB student worked on the
   prompting harness earlier.
-  - poster: http://people.eecs.berkeley.edu/~shankari/SteffensBerkeleyPoster.pdf
-  - slides: http://people.eecs.berkeley.edu/~shankari/SteffensEndOfSummerPresentationBerkeley.pptx
-  - one-slide architecture summary: http://people.eecs.berkeley.edu/~shankari/Experiment_Diagram.pdf
-  - current code: https://github.com/jensteff/e-mission-server/pull/1), but did not complete it.
+  - poster: [http://people.eecs.berkeley.edu/~shankari/SteffensBerkeleyPoster.pdf](http://people.eecs.berkeley.edu/~shankari/SteffensBerkeleyPoster.pdf)
+  - slides: [http://people.eecs.berkeley.edu/~shankari/SteffensEndOfSummerPresentationBerkeley.pptx](http://people.eecs.berkeley.edu/~shankari/SteffensEndOfSummerPresentationBerkeley.pptx)
+  - one-slide architecture summary: [http://people.eecs.berkeley.edu/~shankari/Experiment_Diagram.pdf](http://people.eecs.berkeley.edu/~shankari/Experiment_Diagram.pdf)
+  - current code: [https://github.com/jensteff/e-mission-server/pull/1](https://github.com/jensteff/e-mission-server/pull/1), but did not complete it.
 - Work with the person focusing on the privacy task to run at least static
   algorithms against private data. This has the most dependencies and is the
   least well-understood piece of the project.

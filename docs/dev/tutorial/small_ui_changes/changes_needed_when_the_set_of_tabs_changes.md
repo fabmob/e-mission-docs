@@ -1,7 +1,7 @@
 # Changes needed when the set of tabs changes
 ---
 
-An example of all these changes is at: https://github.com/e-mission/e-mission-phone/pull/304
+An example of all these changes is at: [https://github.com/e-mission/e-mission-phone/pull/304](https://github.com/e-mission/e-mission-phone/pull/304)
 
 In general, to change the set of tabs shown in the UI, it is sufficient to comment out unwanted tabs, or restore required tabs in `www/templates/main.html`
 e.g. add a new tab
@@ -73,7 +73,7 @@ You add a new state with two steps:
     }
   });
     ```
-An example of such a change is https://github.com/e-mission/e-mission-phone/pull/281, with some corrections in https://github.com/e-mission/e-mission-phone/pull/284
+An example of such a change is [https://github.com/e-mission/e-mission-phone/pull/281](https://github.com/e-mission/e-mission-phone/pull/281), with some corrections in [https://github.com/e-mission/e-mission-phone/pull/284](https://github.com/e-mission/e-mission-phone/pull/284)
 
 ### Check the list of states that display personalized information ###
 If a particular state displays personalized information, and the user tries to navigate to it without having consented, we should pop up the consent form again. Without consent, we will not collect data, and we cannot show any personalized information. The list of personalized states is in `www/js/controllers.js` and by default, it is

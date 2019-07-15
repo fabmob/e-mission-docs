@@ -38,9 +38,9 @@ tested before deployment.
       ```
       - search for the text using the standard tools for your computer (e.g. using `grep`, opening in an IDE and searching in the project...)
 1. Select your branch in the github UI
-![branch selection github ui](../../assets/overview/easiest_way_to_change_text/branch_selection_github_ui.png)
+![branch selection github ui](../../../../assets/overview/easiest_way_to_change_text/branch_selection_github_ui.png)
 1. Navigate to the file(s) you found in step 1
-![navigate to file and edit](../../assets/overview/easiest_way_to_change_text/navigate_to_file_and_edit.png)
+![navigate to file and edit](../../../../assets/overview/easiest_way_to_change_text/navigate_to_file_and_edit.png)
 1. Edit the file(s) directly and fill out the "Propose file change" message at the bottom so I know what you are doing. A message about write access is expected. "You’re editing a file in a project you don’t have write access to. Submitting a change to this file will write it to a new branch in your fork"
 1. Submit the pull request with the change
 1. See the change in your UI channel

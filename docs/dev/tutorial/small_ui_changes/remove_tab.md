@@ -41,5 +41,5 @@ Several of the e-mission projects so far have removed some subset of the tabs. T
 ### Caveats ###
 
 1. This is the most naive approach to removing the tab - just hide it from the user. This leaves background operations (e.g. invoked using `$ionicPlatform.ready`) in place. In order to fully remove them, you would want to remove the corresponding HTML and javascript as well. That is outside the scope of a *simple* change, use the ionic1 or angular1 documentation to experiment further.
-1. Removing the heatmap tab is problematic because, since it is aggregate, and not personal, we redirect to it if the user does not consent. If you want to remove the heatmap tab, you need to change the disagree logic (https://github.com/e-mission/e-mission-phone/wiki/Changes-needed-when-the-set-of-tabs-changes), which involves a javascript change.
+2. Removing the heatmap tab is problematic because, since it is aggregate, and not personal, we redirect to it if the user does not consent. If you want to remove the heatmap tab, you need to change the disagree logic ([Changes needed when the set of tabs changes](changes_needed_when_the_set_of_tabs_changes.md)), which involves a javascript change.
 

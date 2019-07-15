@@ -1,6 +1,6 @@
 ## Privacy Improvements ##
 Location data is very privacy sensitive
-(http://www.nature.com/doifinder/10.1038/srep01376). This is particularly true
+([http://www.nature.com/doifinder/10.1038/srep01376](http://www.nature.com/doifinder/10.1038/srep01376)). This is particularly true
 for a location _timeline_, since anonymization techniques fail if there are
 repeated patterns in the data. For example, identifying a users' most common
 location at night and during the day can help us identify their home and work
@@ -55,9 +55,9 @@ against this encrypted data?
   key and all your data.  Do web of trust/delegated authorization schemes (such as WAVE)[https://docs.google.com/document/d/1MGoL5wgVPyIdDJnEwA3We9USi3ZDKNy2pou_sppx6w8/edit?usp=sharing]
 solve this problem? And once the data is decrypted, root on the server where it
 is running will have access to it, which is why it needs to run in a hardware
-enclave(https://keystone-enclave.org/). Does it make sense to run full algorithms in a hardware enclave? It looks like it is currently used primarily for contract checking. Will the overhead be too high?
-    - https://keystone-enclave.org/
-    - https://en.wikipedia.org/wiki/Trusted_execution_environment
+enclave([https://keystone-enclave.org/](https://keystone-enclave.org/)). Does it make sense to run full algorithms in a hardware enclave? It looks like it is currently used primarily for contract checking. Will the overhead be too high?
+    - [https://keystone-enclave.org/](https://keystone-enclave.org/)
+    - [https://en.wikipedia.org/wiki/Trusted_execution_environment](https://en.wikipedia.org/wiki/Trusted_execution_environment)
 
 ### Privacy-preserving aggregation ###
 For structural analysis, we need to see results across a wide range of users.
@@ -83,7 +83,7 @@ for certain kinds of aggregate queries against timeseries data.
 
 We would like to support the following types of queries.
 - Point queries: These represent the kinds of queries that could be answered by a sufficiently complex sensor embedded in the infrastructure. For example:
-  - How many people travelled on road segment `x` (where `x` is the OSM id such as https://www.openstreetmap.org/way/242298339)
+  - How many people travelled on road segment `x` (where `x` is the OSM id such as [https://www.openstreetmap.org/way/242298339](https://www.openstreetmap.org/way/242298339))
   - What is the mode share on road segment `x` (e.g. 25% walk, 25% bike, 50% car)?
   - Both of the above queries over various time ranges (e.g. 3pm - 5pm on weekdays in the summer, etc)
 - Trajectory queries: These are still count queries, but they represent information that you can only find out through trajectories. For example:
