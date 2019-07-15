@@ -61,7 +61,7 @@ nav:
 
 repo_url: https://github.com/fabmob/e-mission-docs/
 theme: 
-    name: readthedocs
+    name: material
     highlightjs: true
 extra_css:
     - assets/css/style.css
