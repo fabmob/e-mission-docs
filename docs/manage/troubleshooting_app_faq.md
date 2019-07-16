@@ -1,4 +1,4 @@
-# Troubleshooting tips (FAQ)
+# Troubleshooting tips (app FAQ)
 ---
 
 ### ios simulator doesn't work ###
