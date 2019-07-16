@@ -1,4 +1,4 @@
-# Troubleshooting Tips (FAQ)
+# Troubleshooting Tips (server FAQ)
 ---
 
 ## Tools to use ##
