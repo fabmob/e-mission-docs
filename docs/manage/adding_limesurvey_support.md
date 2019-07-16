@@ -75,25 +75,24 @@ ___
 We recommend to check everything before actually sending the survey :
 
 1. Create the survey spec and query as explained in [Pushing Surveys from the Server to the Phone](pushing_surveys_from_the_server_to_the_phone.md)
-
-     1. Use option -n for testing the query without sending the survey
+    1. Use option -n for testing the query without sending the survey
     ```bash
     cd directory_e-mission-server
     conda activate emission
     ./e-mission-py.bash bin/push/send_survey.py -q /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/query/tripbike.json -n -s /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/push/bikesurvey.server.sample
     ```
     This will the participant list (resulting from the query) in limesurvey for that survey.
-     2. Send the survey to you to check it is Ok (without -n)
-```
-./e-mission-py.bash bin/push/send_survey.py -e myaddress@mail.com -s /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/push/bikesurvey.server.sample
-```
-2.
+    2. Send the survey to you to check it is Ok (without -n)
+    ```bash
+    ./e-mission-py.bash bin/push/send_survey.py -e myaddress@mail.com -s /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/push/bikesurvey.server.sample
+    ```
+2. 
     1. Now send the survey for real (without -n)
-```
-./e-mission-py.bash bin/push/send_survey.py -q /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/query/tripbike.json -n -s /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/push/bikesurvey.server.sample
-```
+    ```
+    ./e-mission-py.bash bin/push/send_survey.py -q /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/query/tripbike.json -n -s /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/push/bikesurvey.server.sample
+    ```
     2. If necessary, add a user manually
-```
-./e-mission-py.bash bin/push/send_survey.py -e address_to_add@mail.com -s /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/push/bikesurvey.server.sample
-```
+    ```
+    ./e-mission-py.bash bin/push/send_survey.py -e address_to_add@mail.com -s /var/emission/e-mission-server/emission/net/ext_service/push/sample.specs/push/bikesurvey.server.sample
+    ```
 
