@@ -60,8 +60,23 @@ nav:
     - 'Docs reorganisation' : 'contribute_to_the_doc/migration_reason.md'
 
 repo_url: https://github.com/fabmob/e-mission-docs/
+copyright: 'Copyright &copy; 2019 - Traceur de mobilité Fabmob'
 theme: 
-    name: material
-    highlightjs: true
-extra_css:
-    - assets/css/style.css
+    name: null
+    custom_dir: 'theme'
+    language: 'en'
+    logo: 'assets/images/logo.png'
+    feature: false
+    palette:
+        primary: 'light-green'
+        accent: 'blue'
+    font:
+        text: 'Roboto'
+        code: 'Roboto Mono'
+    favicon: 'assets/images/favicon.png'
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
