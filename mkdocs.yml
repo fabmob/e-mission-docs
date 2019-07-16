@@ -59,6 +59,7 @@ nav:
     - 'Contributing': 'contribute_to_the_doc/CONTRIBUTING.md'
     - 'Docs reorganisation' : 'contribute_to_the_doc/migration_reason.md'
 
+repo_name: 'fabmob/e-mission-docs'
 repo_url: https://github.com/fabmob/e-mission-docs/
 copyright: 'Copyright &copy; 2019 - Traceur de mobilité Fabmob'
 theme: 
@@ -80,3 +81,5 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
+extra_javascript:
+  - 'https://code.jquery.com/jquery-3.4.1.min.js'
