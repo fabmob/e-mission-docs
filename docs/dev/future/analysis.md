@@ -22,6 +22,7 @@ common machine learning algorithms ([https://rise.cs.berkeley.edu/blog/mlperf-sp
 
 However, there are several specific challenges to working on location data and
 travel patterns.
+
 1. The data is privacy sensitive. This has led to a dearth of publicly
 available, ground truthed data that can be used for benchmarking. The standard
 datasets either do not have ground truth (e.g. fMRI, MDC), or are old and based
@@ -44,6 +45,7 @@ benchmark, the expansion itself needs to be data-driven.
 
 Before we discuss how to address these challenges, let us understand the 
 two broad evaluation mechanisms.
+
 - **data to code**: ground-truthed datasets are made publicly available,
   researchers download them and run their algorithms on them (e.g. MNIST,
   [http://yann.lecun.com/exdb/mnist/](http://yann.lecun.com/exdb/mnist/))
@@ -130,6 +132,7 @@ and then prompts based on the budget.
 ### Task list ###
 Given all these requirements, it looks like we have a few sub-projects that
 people can choose to tackle.
+
 - Explore kaggle or (better) build a simple system similar to kaggle that runs
   static algorithms against existing data repositories. NREL has a [travel data
   repository](https://www.nrel.gov/transportation/secure-transportation-data/tsdc-about.html)

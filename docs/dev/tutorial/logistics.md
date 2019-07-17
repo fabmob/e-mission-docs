@@ -32,6 +32,7 @@ session of the first day (_e-mission overview_) you will download and
 experiment with the data you have collected.
 
 You can choose from different possible UI _clients_ or _skins_.
+
 - Standard e-mission app: [http://e-mission.eecs.berkeley.edu/](http://e-mission.eecs.berkeley.edu/)
 - Travel survey from [CCI Berkeley](http://communityinnovation.berkeley.edu/) with popup mode/purpose: [https://e-mission.eecs.berkeley.edu/#/client_setup?new_client=cci&clear_usercache=true&clear_local_storage=true](https://e-mission.eecs.berkeley.edu/#/client_setup?new_client=cci&clear_usercache=true&clear_local_storage=true)
 - Spanish version of the above, from [Megumi Yamanaka](https://ced.berkeley.edu/academics/city-regional-planning/people/phd-students/megumi-yamanaka): [https://e-mission.eecs.berkeley.edu/#/client_setup?new_client=megumibrt&clear_usercache=true&clear_local_storage=true](https://e-mission.eecs.berkeley.edu/#/client_setup?new_client=megumibrt&clear_usercache=true&clear_local_storage=true)
@@ -90,6 +91,7 @@ Open Source Software (OSS) concepts:
 The [Monday afternoon session](#evening-session-e-mission-overview) will
 largely be a hands-on session. If you want to get some context before diving
 in, you may want to skim through these papers before then.
+
 - [TRB paper describing how to use e-mission functionality](https://people.eecs.berkeley.edu/~shankari/emission_trb_2017_paper.pdf)
 - [The in-review paper on the e-mission architecture, please do not distribute](https://people.eecs.berkeley.edu/~shankari/em-arch.pdf)
 
@@ -106,21 +108,23 @@ all participants to participate fully, we will support asynchronous
 participation, inspired by this [Nearly Carbon Neutral
 Conference (NCNC)](http://hiltner.english.ucsb.edu/index.php/ncnc-guide/#content).
 As outlined in the NCNC guide, we will:
+
 - record all the sessions and make them available for viewing at any time.
   Since all the sessions are expected to be highly interactive, the recordings
   will largely reflect the participation of in-person attendees.
 - support online discussions on each of the sessions. This will allow remote
   attendees to participate, and will also allow in-person attendees to post
   follow-ups.
-    - In order to keep the online discussion *high-quality*, we will use [github dicussions](https://help.github.com/articles/about-team-discussions/) and only attendees who have registered and sent me their github handle will be able to participate.
-    - In order to ensure that the online discussion is *timely*, the asynchronous
-      participation period will run for **one month ONLY**. On **Thursday, September 20th**,
-      2018, the discussions will be turned off.
+      - In order to keep the online discussion *high-quality*, we will use [github dicussions](https://help.github.com/articles/about-team-discussions/) and only attendees who have registered and sent me their github handle will be able to participate.
+      - In order to ensure that the online discussion is *timely*, the asynchronous
+        participation period will run for **one month ONLY**. On **Thursday, September 20th**,
+        2018, the discussions will be turned off.
 
 #### Async participation procedure ####
 Although the participation is asynchronous, I would still like it to be interactive. It is known that asking questions, both listener-driven and speaker-driven, involves active recall and [helps solidify concepts in long-term memory](https://www.ncbi.nlm.nih.gov/pubmed/20804289).
 
 Therefore, I propose the following procedure:
+
 - I have seeded every discussion with some initial questions
 - Attendees should answer any unanswered questions for which you want to clarify your understanding
    - first come, first served

@@ -2,6 +2,7 @@
 ---
 
 ## Design goals ##
+
 1. Separate model building and model application steps
 1. Seed model building from old-style (Moves) data
 1. Support multiple models in parallel
@@ -11,6 +12,7 @@ Both 1. and 2. imply that we should save the model and re-load it.
 We can use either standard `pickle` or `jsonpickle` to convert the model to json (with the caveat that it is custom to a particular version of scikit-learn)
 
 But how should we store these models?
+
 1. Store to disk
 2. Store to database
 

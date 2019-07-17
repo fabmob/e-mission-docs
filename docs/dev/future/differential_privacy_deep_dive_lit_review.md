@@ -22,6 +22,7 @@ The Shi/Song paper does not seem to address the notion of correlation at all. Th
 
 
 The Rastogi/Nath paper does take correlation seriously. In fact, if I understand correctly, one of their primary contributions is to deal with correlation. But, and maybe this was surprising only to me, their focus is primarily on improving utility rather than privacy of correlated queries.
+
 Couple of things that I inferred from reading more closely with a focus on correlation:
 - the data for each user can be correlated, and that is fine since we are reducing it to a scalar value that is (assumed to be) independent of similar scalar values from other users
 - however, because the data for each user is correlated, the query results across time are also correlated. So if you counted the number of people on a particular stretch of street at `t1`, `t2`... `tn`, they would largely be correlated. The paper has a similar example with weights, if you have a fixed population, the average weight, or the number of people over 200lbs will be largely correlated across weeks.
@@ -95,6 +96,7 @@ With a limited time interval, the authors are able to produce useable noisy coun
 
 #### Definitions ####
 This paper introduces lots of useful notations and definitions to formalize trajectory settings.
+
  - `l_u`-trajectory: A sequence of successive spatiotemporal data points produced by a user `u`. Look at Definition 3 in Section 4 for the full definition.
  - `l`-trajectory privacy: Ensures differential privacy over user specified lengths of trajectory streams. A more precise definition can be found in section 4.
  - User-level privacy: Protecting the whole trajectory stream of a user.
@@ -105,7 +107,7 @@ Paper also focuses on publishing spatio-temporal data over an infinite time inte
 
 #### Privacy Publishing Scheme ####
 - Simple solution to allocating privacy budgets is uniform (Section 5.1).
-   - With a privacy budget `e` at a timestamp, uniformly allocate the privacy budget of `e/l_max` at each timestamp, where `l_max` is the maximum length of any user specificed trajectory length.
+  - With a privacy budget `e` at a timestamp, uniformly allocate the privacy budget of `e/l_max` at each timestamp, where `l_max` is the maximum length of any user specificed trajectory length.
 - Their allocation solution aims to spend privacy budget when it is "worth".
    - At a high level, spend privacy budget when there is enough change from the previous timestamp.
 - Add independent Laplacian noise and the useablility of this noise depends on the privacy budget chosen for that timestamp.
@@ -119,16 +121,16 @@ Paper also focuses on publishing spatio-temporal data over an infinite time inte
 ### Questions ###
 
 - So even the classical technique doesn't appear to be a problem if the number of queries <<< number of users. Is this right?
-   - (JS Response): I do think the classical solution (assuming we have `k` correlated queries, ensure privacy by multiplying the noise of each of the correlated queries by `k`) would work.
-      - In a simple counting query example with 1,000,000 users and 12 correlated queries (global sensitivity is 1), the standard deviation  is around 200 which is a small percentage of the overall number of users.
-      - But we should determine the threshold (in terms of deviation) for which we can use the classical technique as this is more efficient.
+    - (JS Response): I do think the classical solution (assuming we have `k` correlated queries, ensure privacy by multiplying the noise of each of the correlated queries by `k`) would work.
+        - In a simple counting query example with 1,000,000 users and 12 correlated queries (global sensitivity is 1), the standard deviation  is around 200 which is a small percentage of the overall number of users.
+        - But we should determine the threshold (in terms of deviation) for which we can use the classical technique as this is more efficient.
  
 - And if it does, we can use their frequency domain trick, or maybe there is a non-patented version in the literature? Is this right?
-   - (JS Response): Yes as long as we know the query workload (i.e. the number of correlated queries). I don't think this is practical as analysts will not typically know the number of queries they need ahead of time. Thus, it would be important to look more into methods that are adaptive to one at a time queries such as the Private Multiplicative Weights Mechanism.
+    - (JS Response): Yes as long as we know the query workload (i.e. the number of correlated queries). I don't think this is practical as analysts will not typically know the number of queries they need ahead of time. Thus, it would be important to look more into methods that are adaptive to one at a time queries such as the Private Multiplicative Weights Mechanism.
 
 - We have been worried for a while about the prospect of an attacker averaging out values from correlated queries to remove the noise. Why doesn't that happen in with the classical technique?
-   - I guess this where the privacy budget comes in. So in that case, why would the user establish the privacy budget? If we know how much noise is added in each query, can't we determine the number of queries that are permitted before the noise can be averaged out? 
-   - there is an intutive example with little math on page 12 of Lindell/Ormi, but I think that I need to digest that further. If anybody else got it, I'd love to get a tutorial...
-   - the FPAk paper explicitly handles correlation between adjacent points; does it also handle correlation between points that are not adjacent (e.g. every wed morning at 10am, I arrive at work)
+    - I guess this where the privacy budget comes in. So in that case, why would the user establish the privacy budget? If we know how much noise is added in each query, can't we determine the number of queries that are permitted before the noise can be averaged out? 
+    - there is an intutive example with little math on page 12 of Lindell/Ormi, but I think that I need to digest that further. If anybody else got it, I'd love to get a tutorial...
+    - the FPAk paper explicitly handles correlation between adjacent points; does it also handle correlation between points that are not adjacent (e.g. every wed morning at 10am, I arrive at work)
 
 

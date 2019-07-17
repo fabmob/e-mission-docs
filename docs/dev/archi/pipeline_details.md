@@ -10,10 +10,12 @@ The pipeline for a single user is intended to be single-threaded, with the
 stages running sequentially. Pipelines for multiple users can run in parallel.
 
 In addition, every pipeline stage should:
+
 - only work on fresh data, for improved performance
 - work on all unprocessed data, for correctness
 
 We ensure this by maintaining state for each pipeline stage. The state includes
+
 - *the time at which the stage started running*: This is set when the stage
 starts running and unset when the stage completes. It is used to enforce
 single threading; if this value is set for a particular, then other instances
@@ -26,6 +28,7 @@ processes data in the range (last ts processed, now)
 
 ### Resetting the pipeline ###
 If your pipeline state is messed up in any way, you can just reset the pipeline. The raw data is still present, so you can re-run the pipeline again. Re-running the pipeline after a reset should generate the same results, although it may take a LOOOONG time depending on the data that you have.
+
   - if you are running the pipeline on a small amount of local data (e.g. to
       reproduce on your desktop), you can reset the entire pipeline (`$ ./e-mission-py.bash bin/reset_pipeline.py -all`) and re-run
   - if you ran the pipeline for a single user, you can reset the pipeline for that user (`$ ./e-mission-py.bash bin/reset_pipeline.py [-u|-e]`)
@@ -40,6 +43,7 @@ Note that deleting the pipeline state entries without fully resetting the pipeli
 #### `curr_run_ts` = ...., while processing pipeline ####
 If you see the error `curr_state.curr_run_ts = [0-9]*, while processing pipeline`, it means that the stage is marked as still running.
 Steps to resolve:
+
 1. Make sure that there isn't any other instance of the pipeline running (e.g. something like `$ ps -aef | grep intake`)
 1. Assuming that is true, [reset the pipeline](#resetting_the_pipeline)
 

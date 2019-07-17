@@ -10,6 +10,7 @@ But sometimes, you want to make some quick changes without that overhead. The
 most common use case is probably a deployer who hired a programmer to make a
 custom UI. After the contract is over, she realizes that she needs to make
 minor changes to the text - e.g.
+
   - to the consent, once the final IRB approval is in place,
   - to prompts or other visual elements, based on feedback from a pilot
 
@@ -18,6 +19,7 @@ easy as editing a google doc!
 
 ## Safe changes ##
 I would not recommend this for anything other than:
+
   - direct text substitutions (e.g. "foo" -> "bar")
   - adding non-visual tags (e.g. adding `alt` tags to images)
 
@@ -28,15 +30,15 @@ tested before deployment.
 1. Find the file to change
     - If your changes will be on master, you can search directly in github
     - If your changes will be on a branch other than master
-      - clone the repo to your local computer
-      ```
-      $ git clone https://github.com/e-mission/e-mission-phone.git
-      ```
-      - switch to the branch you want to change
-      ```
-      $ git checkout --track origin/<your_branch>
-      ```
-      - search for the text using the standard tools for your computer (e.g. using `grep`, opening in an IDE and searching in the project...)
+        - clone the repo to your local computer
+        ```
+        $ git clone https://github.com/e-mission/e-mission-phone.git
+        ```
+        - switch to the branch you want to change
+        ```
+        $ git checkout --track origin/<your_branch>
+        ```
+        - search for the text using the standard tools for your computer (e.g. using `grep`, opening in an IDE and searching in the project...)
 1. Select your branch in the github UI
 ![branch selection github ui](../../../assets/overview/easiest_way_to_change_text/branch_selection_github_ui.png)
 1. Navigate to the file(s) you found in step 1

@@ -33,14 +33,14 @@ On your LimeSurvey admin interface :
 }
 ```
 
-The `url_surveys` will be used to build an URL to be send when the user will retrieve his surveys with the phone app.
+The `url_surveys` will be used to build an URL to be sent when the user will retrieve his/her surveys with the phone app.
 
 ## Preparing a LimeSurvey survey
 
 For each new survey you will want to send, it will be necessary to quickly configure it. 
 
 1. After clicking on *Create a new survey*, go to the *Participant settings* tab,
-2. Change the default token length to 32 instead of 15 (by passing the length to 32, this will allow us to create an invitation token based on the `uuid` of the user),
+2. Change the **default token length to 32** instead of 15 (by passing the length to 32, this will allow us to create an invitation token based on the `uuid` of the user),
 3. Activate *Enable token-base response persistence*,
 4. Optionally, if you want to allow the user to change his response you can enable *Allow multiple responses or update responses with one tokens*,
 5. After the creation of the survey, into the settings of the survey go into *Survey menu -> Survey participants* and click on "Initialise participant table".
@@ -48,12 +48,12 @@ For each new survey you will want to send, it will be necessary to quickly confi
 ## Sending the LimeSurvey survey
 
 After customising your survey, you can now send it to the user ! To send a survey, you can check [Pushing Surveys from the Server to the Phone](pushing_surveys_from_the_server_to_the_phone.md). However, use `limesurvey.sample` into the `emission/net/ext_service/push/sample.specs/push` as example. The *survey id* (`sid`) can be found either at the end of the survey url or in the LimeSurvey interface into *Survey settings -> Overview*. 
-The uuidElementId is used by other external surveys, but not by LImeSurvey, you can pu any content here.
+The uuidElementId is used by other external surveys, but not by LimeSurvey, you can pu any content here.
 
 ```json
 {
     "alert_type": "survey",
-    "title": "Did you share rides ?",
+    "title": "Did you rideshare ?",
     "message": "3 questions - Approx. 1 min",
     "image": "icon",
     "force-start": 1,

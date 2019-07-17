@@ -26,17 +26,20 @@ under 5000, which seems low to have a minutes-long response time.
 The first goal of this task is to improve the performance of the server so that
 projects can run a reasonable study without spending too much money.
 I'm going to define a reasonable study as:
+
 - 10,000 people
 - location data every 30sec on android/15m on iOS
 - 6 months of data collection
 
 I'm going to define a reasonable amount of computing and storage resources as:
+
 - *compute*: `m5.xlarge` instance (4 vCPU, 16 GB)
 - *storage*: 10 GB I/O optimized EB2 instance
 
 This means that the compute + storage for such a study should cost ~ $150 for compute + $30 for storage ~ $180 total.
 Ideally, we would be able to specify the users + duration supported for a bunch
 of discrete instance points - e.g. 
+
 - `m5.large` instance + 1 GB GP2 EB2 instance (~$70 for compute + ~ 10 cents for storage = $70 total)
 - ...
 
@@ -60,26 +63,26 @@ choice for a single datastore? etc
       ([https://github.com/e-mission/e-mission-server/tree/master/emission/simulation](https://github.com/e-mission/e-mission-server/tree/master/emission/simulation)),
       however it is obsolete. We need to replace it with a generator that creates
       artificial data in the new format.
-      - There won't be existing solutions for this since the data is specific
-        to e-mission. You can try to see if there is something similar that you
-        can adapt, but set a time limit on the search since it is unlikely.
+        - There won't be existing solutions for this since the data is specific
+          to e-mission. You can try to see if there is something similar that you
+          can adapt, but set a time limit on the search since it is unlikely.
     - _Workload simulator_: A harness that generates API calls at a pre-defined
       rate against the system (e.g. x `get` calls/sec, y `put` calls/sec, z
       `getTimeline` calls/sec) and records the response time.
-      - Note that this can be combined with the synthetic data generator - the
-        generated data can be inserted into the system using API calls. This
-        mode is closer to the operation of a real system.
-      - Note that there are probably existing solutions for this. Look around
-        first. Don't fall into the Not Invented Here trap.
+        - Note that this can be combined with the synthetic data generator - the
+          generated data can be inserted into the system using API calls. This
+          mode is closer to the operation of a real system.
+        - Note that there are probably existing solutions for this. Look around
+          first. Don't fall into the Not Invented Here trap.
     - _Server Launcher_: This is optional, but it will probably make your life
       easier, and will make end-users' lives easier as well. Write a script
       that, given a particular deployment configuration, creates an e-mission
       server instance with that configuration, installs the server, configures the
       server properly and launches the cronjobs.
-      - There are approximately 1 million solutions for this. Use them. One of
-        the current users (in Australia) supposedly worked on a Docker
-        configuration for e-mission. You can contact [https://github.com/asiripanich](https://github.com/asiripanich) to see if you
-        can start with that.
+        - There are approximately 1 million solutions for this. Use them. One of
+          the current users (in Australia) supposedly worked on a Docker
+          configuration for e-mission. You can contact [https://github.com/asiripanich](https://github.com/asiripanich) to see if you
+          can start with that.
 1. Run various workloads against various deployment configurations and figure
 out how the server scales
 1. If the performance is sub-optimal, look at the logs to figure out what is

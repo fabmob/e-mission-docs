@@ -16,11 +16,13 @@ storage (e.g. notification configuration)?
 1. You need to decide the data format.
 
 On the phone, the data format can be:
+
 - a native class, which allows data validation and easier access of the elements. For example, SimpleLocation, with android ([https://github.com/e-mission/e-mission-data-collection/blob/master/src/android/wrapper/SimpleLocation.java](https://github.com/e-mission/e-mission-data-collection/blob/master/src/android/wrapper/SimpleLocation.java)) and iOS ([https://github.com/e-mission/e-mission-data-collection/blob/master/src/ios/Wrapper/SimpleLocation.m](https://github.com/e-mission/e-mission-data-collection/blob/master/src/ios/Wrapper/SimpleLocation.m)) versions, OR
 - pure JSON, which requires no new classes, but is harder to use because the fields have to be accessed as strings
 
 On the server, the data is in JSON (e.g.
 [https://github.com/e-mission/e-mission-server/blob/master/emission/core/wrapper/location.py](https://github.com/e-mission/e-mission-server/blob/master/emission/core/wrapper/location.py)).  In addition to creating such an object, you need to
+
 - include a reference to it in `entry.py`
 - in `builtin_timeseries.py`
 - add formatters that can expand fields if necessary (e.g. [https://github.com/e-mission/e-mission-server/blob/master/emission/net/usercache/formatters/android/location.py](https://github.com/e-mission/e-mission-server/blob/master/emission/net/usercache/formatters/android/location.py))

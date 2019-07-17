@@ -8,6 +8,7 @@ code and documentation up to date, and I didn't want to cause confusion by
 having obsolete docs.
 
 So the data model is represented by wrapper classes, stored in `emission/core/wrapper`.
+
 - Each python wrapper class contains the list of fields, along with a brief description.
 - Classes can inherit from other classes (e.g. `cleaned_trip` inherits from `trip`)
 - `Entry` is a special class that represents an entry in the timeseries,

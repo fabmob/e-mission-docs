@@ -3,6 +3,7 @@
 
 There are three main public API calls exposed by the e-mission API server. All
 of them share the following characteristics:
+
 - they are `HTTP POST` calls
 - they do not currently require an API key for access. If we get popular enough
   to be the target for DDOS attacks, we will revisit this decision.
@@ -14,6 +15,7 @@ on a single AWS host. The performance will improve after Nov 1st, when I split t
 functionality among multiple hosts.
 
 The three public API calls are:
+
 - `/result/heatmap/pop.route/<time_type>`
 - `/result/heatmap/incidents/<time_type>`
 - `/result/metrics/<time_type>`
@@ -99,6 +101,7 @@ Out[16]: 112
 ### Incident queries ###
 
 Incident queries are very similar to heatmap queries, only sent to a different URL. Some other differences are:
+
 - they don't support modes
 - since they are user-reported and not collected in the background, there are
   typically few of them.

@@ -17,6 +17,7 @@ running code is in an interpreted language (python).
 ## Three main alternatives
 
 The three main options for running code in an enclave appear to be:
+
 1. *Use the SDK directly*: Intel has an SDK to help people write enclave
 programs. Programs need to be rewritten to use the SDK. [Link](https://software.intel.com/en-us/sgx-sdk-dev-reference-writing-enclave-functions)
 1. *Use a shim (scone)*: Use a simple libc that is rewritten to run within the enclave.
