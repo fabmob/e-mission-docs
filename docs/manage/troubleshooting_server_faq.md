@@ -8,7 +8,7 @@ The main tools that you will want to use for troubleshooting are:
 
 You can use standard unix tools (`grep`, `less`, ...) to explore the logs - some particular logs to look for in particular scenarios are detailed below.
 
-You can start exploring the data by running the sample python code in the sample (`[Timeseries_Sample.ipynb](https://github.com/e-mission/e-mission-server/blob/master/Timeseries_Sample.ipynb)`).
+You can start exploring the data by running the sample python code in the sample ([`Timeseries_Sample.ipynb`](https://github.com/e-mission/e-mission-server/blob/master/Timeseries_Sample.ipynb)).
 
 You can run the sample code from a terminal by using the ipython console (`e-mission-server$ ./e-mission-ipy.bash`) and copy-pasting the commands.
 
