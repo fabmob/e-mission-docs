@@ -55,8 +55,8 @@ nav:
         - '5. Analysis': 'dev/future/analysis.md'
         - '6. Scalability': 'dev/future/scalability.md'
         - '7. Unanswered questions': 'dev/future/unanswered_questions.md'
-        - Enhance Traceur Fabmob:
-            - '1. Complete Profile screen': 'dev/future/enhance_traceur_fabmob/profile_screen.md'
+    - Enhance Traceur Fabmob:
+        - '1. Complete Profile screen': 'dev/enhance_traceur_fabmob/profile_screen.md'
 - 5. Documenting: 
     - 'Contributing': 'contribute_to_the_doc/CONTRIBUTING.md'
     - 'Docs reorganisation' : 'contribute_to_the_doc/migration_reason.md'
