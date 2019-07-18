@@ -5,7 +5,7 @@ ___
 
 ## Actual configuration
 
-Currently, logs are rotating daily at midnight using a [TimedRotatingFileHandler](https://docs.python.org/3/library/logging.handlers.html#timedrotatingfilehandler). Each day, at 7 o'clock, the server is executing a script which will merge the log of the pipeline into a single file. Moreover, if there is errors, the server will also notify the administrator by sending them a push notification thanks to [notify.run](https://notify.run/). This script is currently only available locally on the server and can be found at `/var/emission/em-scripts/merge_intake_logs.py`. 
+Currently, logs are rotating daily at midnight using a [TimedRotatingFileHandler](https://docs.python.org/3/library/logging.handlers.html#timedrotatingfilehandler). Each day, at 7 o'clock, the server is executing a script which will merge the log of the pipeline into a single file. Moreover, if there are errors, the server will also notify the administrator by sending them a push notification thanks to [notify.run](https://notify.run/). This script is currently only available locally on the server and can be found at `/var/emission/em-scripts/merge_intake_logs.py`. 
 
 ### Logs architecture
 
