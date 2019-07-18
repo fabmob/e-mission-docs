@@ -70,6 +70,7 @@ theme:
     name: material
     language: 'en'
     logo: 'assets/images/logo.png'
+    favicon: 'assets/images/icon.png'
     feature: false
     palette:
         primary: 'light-green'
@@ -77,7 +78,7 @@ theme:
     font:
         text: 'Roboto'
         code: 'Roboto Mono'
-    favicon: 'assets/images/favicon.png'
+
 markdown_extensions:
   - markdown.extensions.admonition
   - markdown.extensions.codehilite:
