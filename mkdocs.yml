@@ -57,6 +57,7 @@ nav:
         - '6. Scalability': 'dev/future/scalability.md'
         - '7. Unanswered questions': 'dev/future/unanswered_questions.md'
     - Enhance Traceur Fabmob:
+        - '0. Intro': 'dev/enhance_traceur_fabmob/introduction.md'
         - '1. Complete Profile screen': 'dev/enhance_traceur_fabmob/profile_screen.md'
 - 5. Documenting: 
     - 'Contributing': 'contribute_to_the_doc/CONTRIBUTING.md'
