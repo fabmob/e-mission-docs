@@ -5,7 +5,7 @@ ___
 
 ## Actual configuration
 
-Currently, logs are rotating daily at midnight using a [TimedRotatingFileHandler](https://docs.python.org/3/library/logging.handlers.html#timedrotatingfilehandler). Each day, at 7 o'clock, the server is executing a script which will merge the log of the pipeline into a single file. Moreover, if there are errors, the server will also notify the administrator by sending them a push notification thanks to [notify.run](https://notify.run/). This script is currently only available locally on the server and can be found at `/var/emission/em-scripts/merge_intake_logs.py`. 
+Currently, logs are rotating daily at midnight using a [TimedRotatingFileHandler](https://docs.python.org/3/library/logging.handlers.html#timedrotatingfilehandler). Each day, at 7 o'clock, the server is executing a script which will merge the log files of the pipeline into a single file. Moreover, if there are errors, the server will also notify the administrator by sending them a push notification thanks to [notify.run](https://notify.run/). This script is currently only available locally on the server and can be found at `/var/emission/em-scripts/merge_intake_logs.py`. 
 
 ### Logs architecture
 
@@ -20,7 +20,7 @@ All the `e-mission` logs can be found into the folder `/var/log/emission`. It is
 
 ## Changing log configuration
 
-Each logs configuration files can be found in the folder `e-mission-server/conf/log`. In those files, it is possible to change the [loggins handlers](https://docs.python.org/3/library/logging.handlers.html) but also the [formatter](https://docs.python.org/3/library/logging.handlers.html). The log configuration file of the pipeline is `intake.conf` as for the `webserver`, it is `webserver.conf`. To have daily rotating logs, those files will be configured as below:
+Each logs configuration files can be found in the folder `e-mission-server/conf/log`. In those files, it is possible to change the [logging handlers](https://docs.python.org/3/library/logging.handlers.html) but also the [formatter](https://docs.python.org/3/library/logging.handlers.html). The log configuration file of the pipeline is `intake.conf` ; as for the `webserver`, it is `webserver.conf`. To have daily rotating logs, those files will be configured as below:
 
 ```json
 {
@@ -101,4 +101,4 @@ notify = Notify()
 notify.send('Error(s) in the pipeline, you should check intake_global-errors.log')
 ```
 
-The administrator will just have to scan the QR code contained in the channel webpage and "Subscribe is device" to receive a push notification. 
+The administrator will just have to scan the QR code contained in the channel webpage and "Subscribe on this device" to receive a push notification on your phone. 
