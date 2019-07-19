@@ -81,7 +81,7 @@ $ pip install notify-run
 After installing it, we have to configure it. To add a previously created channel, we will use `configure`.
 
 ```bash
-$ notify-run configure <url>
+$ notify-run configure <url without the /c/>
 ```
 
 Or, we can register a new channel with `register`.
