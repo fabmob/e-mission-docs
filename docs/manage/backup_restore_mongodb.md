@@ -15,7 +15,7 @@ We can use the command `mongodump` to backup all the databases of MongoDB. Howev
 $ mongodump --gzip --archive=archivename`
 ```
 
-# How to backup using the script
+## How to backup using the script
 
 To backup using `mongo_backup_weekly.py` we can specify two arguments the output path and the database to backup. If there is no arguments or only one, the script will use a default configuration (`Stage_database`for the database and `/var/emission/backup` for the output file). We can use the script as below: 
 
