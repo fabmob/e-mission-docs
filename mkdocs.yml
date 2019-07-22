@@ -17,8 +17,9 @@ nav:
     - '3. Evaluation procedure': 'manage/evaluation_procedure.md'
     - '4. Requesting data as a collaborator': 'manage/requesting_data_as_a_collaborator.md'
     - '5. Managing the logs': 'manage/managing_the_logs.md'
-    - '6. Pushing surveys from server to phone': 'manage/pushing_surveys_from_the_server_to_the_phone.md'
-    - '6b. Adding LimeSurvey': 'manage/adding_limesurvey_support.md'
+    - '6. Backup and restore MongoDB': 'manage/backup_restore_mongodb.md'
+    - '7. Pushing surveys from server to phone': 'manage/pushing_surveys_from_the_server_to_the_phone.md'
+    - '7b. Adding LimeSurvey': 'manage/adding_limesurvey_support.md'
 - 4. Develop:
     - Tutorial:
         - 'Workshop intro': 'dev/tutorial/hands-on-overview.md'
