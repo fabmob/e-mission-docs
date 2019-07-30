@@ -103,13 +103,13 @@ To test this, you need to be running a server ([e-mission-server - README.md](ht
 
 The data is normally pushed automatically to the server, but you may want to force it during testing. In order to ensure that the data for the trip can be retrieved during the trip for local processing, only data upto the last `TRIP_ENDED` transition is pushed to the server. This means that you need to start and end a trip every time you push data.
 
-You can start and end trips by directly manipulating the state machine in the developer zone. `EXIT_GEOFENCE` followed by `STOPPED_MOVING` on android or `TRIP_ENDED` will generate a trip. Force syncing after that should push the data to the server. Check out the troubleshooting section to confirm if this worked correctly ([Troubleshooting Server - Is the data getting to the server correctly ?](../../manage/troubleshooting_server_faq#is-the-data-getting-to-the-server-correctly)).
+You can start and end trips by directly manipulating the state machine in the developer zone. `EXIT_GEOFENCE` followed by `STOPPED_MOVING` on android or `TRIP_ENDED` will generate a trip. Force syncing after that should push the data to the server. Check out the troubleshooting section to confirm if this worked correctly ([Troubleshooting Server - Is the data getting to the server correctly ?](../../../manage/troubleshooting_server_faq#is-the-data-getting-to-the-server-correctly)).
 
 #### Access the data on the server ####
 
 When the data gets to the server, it is in the usercache. When the regular pipeline runs ([The Analysis Pipeline](../../install/deploying_your_own_server_to_production.md#the-analysis-pipeline)), the formatters are run on it, and it moves from the usercache to the timeseries.
 
 A unified view of the both the usercache and the timeseries is provided by the `cache_series` datastructure and can be used to confirm that the objects were saved correctly.
-([Troubleshooting Server - Confirm that the entries are really in the database](../../manage/troubleshooting_server_faq#confirm-that-the-entries-are-really-in-the-database))
+([Troubleshooting Server - Confirm that the entries are really in the database](../../../manage/troubleshooting_server_faq#confirm-that-the-entries-are-really-in-the-database))
 
-If they were originally visible, but are lost when the pipeline runs, there is an error with the formatter ([Troubleshooting Server - My data disappears when I run the intake pipeline](../../manage/troubleshooting_server_faq#my-data-disappears-when-i-run-the-intake-pipeline)). If they are visible even after the formatter runs, you can use other timeseries operations to manipulate the data.
+If they were originally visible, but are lost when the pipeline runs, there is an error with the formatter ([Troubleshooting Server - My data disappears when I run the intake pipeline](../../../manage/troubleshooting_server_faq#my-data-disappears-when-i-run-the-intake-pipeline)). If they are visible even after the formatter runs, you can use other timeseries operations to manipulate the data.

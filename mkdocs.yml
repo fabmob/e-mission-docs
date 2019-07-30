@@ -34,6 +34,7 @@ nav:
             - '7. Changes needed when the set of tabs changes': 'dev/tutorial/small_ui_changes/changes_needed_when_the_set_of_tabs_changes.md'
         - Create a custom phone app:
             - '1. Installing prerequisites': 'dev/tutorial/create_custom_phone_app/installation.md'
+            - '2. How to add tracking to your app': 'dev/tutorial/create_custom_phone_app/how_to_add_tracking_to_your_app.md'
     - Architecture:
         - '1. Data model': 'dev/archi/data_model.md'
         - '2. Module structure': 'dev/archi/module_structure.md'
