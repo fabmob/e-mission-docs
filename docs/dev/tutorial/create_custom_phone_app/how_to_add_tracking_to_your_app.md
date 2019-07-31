@@ -32,7 +32,23 @@ window.cordova.plugins.BEMDataCollection.markConsented(consentProtocol).then(fun
 });
 ```
 
-When `markConsented`is called, the consent will be stored in the user local storage with the key `config/consent` the plugin will then check if the approval date is equals to the one specified into the `config.xml`, if it matches, the state will changed from `local.state.start` to `local.state.waiting_for_trip_start`. You can retrieve and display the current state with the function `getState()`of the same plugin. 
+When `markConsented`is called, the consent will be stored in the user local storage with the key `config/consent` the plugin will then check if the approval date is equals to the one specified into the `config.xml`, if it matches, the state will changed from `local.state.start` to `local.state.waiting_for_trip_start`. You can retrieve and display the current state with the function `getState()`of the same plugin ([Retrieving current state](#retrieving-current-state)). 
+
+## Server syncing
+
+Like the tracking with the consent, in order to be able to sync with server you will need to mark the intro to done. To do that, you will need to store into the localstorage at the key `intro_done` when the user finished to read the consent, accepted it and then logged in. If there is no value into `intro_done`, the application will not sync. 
+
+We can put a key/value into the local storage by using the function `putLocalStorage(key,value)` provided by the plugin [cordova-usercache](https://github.com/e-mission/cordova-usercache). However, the value must be a JSON. 
+
+```js
+window.cordova.plugins.BEMUserCache.putLocalStorage("intro_done", {"intro_done": new Date()});
+```
+
+We are now able to use the function `forceSync()` provided by [cordova-server-sync](https://github.com/e-mission/cordova-server-sync) which will (as the name suggests) force sync with the server. 
+
+```js
+window.cordova.plugins.BEMServerSync.forceSync();
+```
 
 ## Displaying and managing states
 
