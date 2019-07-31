@@ -35,6 +35,7 @@ nav:
         - Create a custom phone app:
             - '1. Installing prerequisites': 'dev/tutorial/create_custom_phone_app/installation.md'
             - '2. How to add tracking to your app': 'dev/tutorial/create_custom_phone_app/how_to_add_tracking_to_your_app.md'
+            - '3. Retrieving users data': 'dev/tutorial/create_custom_phone_app/retrieving_users_data.md'
     - Architecture:
         - '1. Data model': 'dev/archi/data_model.md'
         - '2. Module structure': 'dev/archi/module_structure.md'
