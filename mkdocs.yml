@@ -64,6 +64,8 @@ nav:
     - Enhance Traceur Fabmob:
         - '0. Intro': 'dev/enhance_traceur_fabmob/introduction.md'
         - '1. Complete Profile screen': 'dev/enhance_traceur_fabmob/profile_screen.md'
+        - '2. Upgrading versions': 'dev/enhance_traceur_fabmob/upgrading_versions.md'
+        - '3. Migrating to Ionic 4': 'dev/enhance_traceur_fabmob/migrating_to_ionic4.md'
 - 5. Documenting: 
     - 'Contributing': 'contribute_to_the_doc/CONTRIBUTING.md'
     - 'Docs reorganisation' : 'contribute_to_the_doc/migration_reason.md'
