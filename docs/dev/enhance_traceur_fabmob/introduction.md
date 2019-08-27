@@ -2,6 +2,7 @@
 
 Traceur Fabmob is a fork of e-mission, we enhance or add features to the software.  
 The current list of enhancements planned is described in [this issue list](https://github.com/fabmob/e-mission-phone-fabmob/issues).  
+[This report (in French)](https://drive.google.com/file/d/1h7PWoA6sJBYYeRoO2OgSiibv1ZJH8VLZ/view) of the developments done by Loïc Mayol from June to August 2019 is particularly for understanding the details of the limesurvey, internationalisation and Profile+Dashboard screens enhancements.
 
 When the enhancement is not too specific to FabMob, we propose them to the e-mission project as Pull Requests (from our e-mission-contrib branch).  
 
