@@ -8,7 +8,7 @@ The current list of enhancements planned is described in [this issue list](https
 In each of our repo, there at least 2 branches, the **master branch** and the **e-mission-contrib branch** (e.g. for e-mission-translate, e-mission-docs):
 
 - the updates specific to our FabMob app (and thus do not concern Berkeley's e-mission) are merged on the master branch (e.g. for the page you are reading now which is a file in the e-mission-docs repo);  
--the corrections or enhancements proposed as contributions to the e-mission project should be pushed on the e-mission-contrib branche. We then make a pull request to Shankari, who will validate and eventually updated e-mission master branche with the contrib. We can then pull the updates of e-mission master to our fabmob master branch.
+- the corrections or enhancements proposed as contributions to the e-mission project should be pushed on the e-mission-contrib branche. We then make a pull request to Shankari, who will validate and eventually updated e-mission master branche with the contrib. We can then pull the updates of e-mission master to our fabmob master branch.
 
 
 ## Enhancement "studies"
