@@ -6,15 +6,15 @@
 
 ## Traceur Fabmob specific info:  
 
+- [**projet Traceur web site**](https://oultim.frama.site) : presentation, evaluations, news...    
+- [**CODE on GitHub**](https://github.com/fabmob)     
+
 - **Docs**: the Traceur doc is [in the master branch](https://github.com/fabmob/e-mission-docs/tree/master) ; the doc pulled from e-mission is [in the e-mission-contrib branch](https://github.com/fabmob/e-mission-phone-fabmob/tree/e-mission-contrib), to be used when we want to contribute (PRs) to the e-mission docs  
 - **Code** : similarly there is a traceur FabMob master branch for [e-mission-phone-fabmob](https://github.com/fabmob/e-mission-phone-fabmob/tree/master) and [e-mission-server-fabmob](https://github.com/fabmob/e-mission-server-fabmob/tree/master), as for [e-mission-translate](https://github.com/fabmob/e-mission-translate/tree/master), and an e-mission-contrib branch  
 - **Issues** : [Specific issues of the Traceur FabMob project](https://github.com/fabmob/e-mission-phone-fabmob/issues) currently concern more the phone app. You can see how we are progressing by looking at the [Traceur PROJECT](https://github.com/fabmob/e-mission-phone-fabmob/projects/1)   
 
 - [**Docs web site on ReadTheDocs**](https://fabmob.readthedocs.io/)
 
-- [**CODE on GitHub**](https://github.com/fabmob)     
-
-- [**traceur web site**](https://oultim.frama.site) : presentation, evaluations, news...
 
 ## General E-mission info:
 
