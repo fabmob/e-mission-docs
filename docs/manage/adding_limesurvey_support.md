@@ -70,9 +70,10 @@ The uuidElementId is used by other external surveys, but not by LimeSurvey, you 
 
 ___
 
-## Recommendation 
+## Check everything before sending the survey! 
 
-We recommend to check everything before actually sending the survey :
+!!! warning
+    Before sending the LimeSurvey survey, we also ecommend to check everything before actually sending the survey :
 
 1. Create the survey spec and query as explained in [Pushing Surveys from the Server to the Phone](pushing_surveys_from_the_server_to_the_phone.md)
     1. Use option -n for testing the query without sending the survey
